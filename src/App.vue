@@ -1,52 +1,42 @@
 <template>
   <v-app>
-    <v-app-bar dense app>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-      <!-- <v-toolbar-title>Michelle Watts' Portfolio</v-toolbar-title> -->
-
-      <v-spacer></v-spacer>
-
-      <v-btn @click="toggleTheme" text rounded>
-        <v-icon @click="show = !show">{{
-          !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
-        }}</v-icon>
-      </v-btn>
-
+    <v-app-bar color="accent-4" dense app>
       <v-menu left bottom>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn icon v-bind="attrs" v-on="on">
-            <v-icon>mdi-dots-vertical</v-icon>
+          <v-btn class="hidden-md-and-up" icon v-bind="attrs" v-on="on">
+            <v-app-bar-nav-icon> </v-app-bar-nav-icon>
           </v-btn>
         </template>
 
         <v-list>
           <v-list-item v-for="link in links" :key="link" :to="link.url">
-            <v-list-item-title> {{ link.label }}</v-list-item-title>
+            <v-list-item-title>{{ link.label }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
-    </v-app-bar>
 
-    <!-- <v-app-bar app color="primary" dark>
-      <v-toolbar-title>Michelle Watts' Portfolio</v-toolbar-title>
+      <v-toolbar-title class="hidden-sm-and-down"
+        >Michelle Watts' Portfolio</v-toolbar-title
+      >
+
       <v-spacer></v-spacer>
+
       <v-btn
+        class="hidden-sm-and-down"
         v-for="link in links"
         :key="`${link.label}-header-link`"
         text
-        rounded
         :to="link.url"
       >
         {{ link.label }}
       </v-btn>
-
       <v-btn @click="toggleTheme" text rounded>
         <v-icon @click="show = !show">{{
           !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
         }}</v-icon>
       </v-btn>
-    </v-app-bar> -->
+    </v-app-bar>
+
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -78,16 +68,17 @@ export default {
 
   data() {
     return {
+      drawer: null,
       show: false,
       links: [
         {
           label: "Home",
           url: "/",
         },
-        {
-          label: "About",
-          url: "/about",
-        },
+        // {
+        //   label: "About",
+        //   url: "/about",
+        // },
         {
           label: "Portfolio",
           url: "/portfolio",
