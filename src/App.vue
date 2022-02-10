@@ -1,6 +1,34 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar dense app>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+      <!-- <v-toolbar-title>Michelle Watts' Portfolio</v-toolbar-title> -->
+
+      <v-spacer></v-spacer>
+
+      <v-btn @click="toggleTheme" text rounded>
+        <v-icon @click="show = !show">{{
+          !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
+        }}</v-icon>
+      </v-btn>
+
+      <v-menu left bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn icon v-bind="attrs" v-on="on">
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item v-for="link in links" :key="link" :to="link.url">
+            <v-list-item-title> {{ link.label }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </v-app-bar>
+
+    <!-- <v-app-bar app color="primary" dark>
       <v-toolbar-title>Michelle Watts' Portfolio</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
@@ -18,7 +46,7 @@
           !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
         }}</v-icon>
       </v-btn>
-    </v-app-bar>
+    </v-app-bar> -->
     <v-content>
       <router-view></router-view>
     </v-content>
