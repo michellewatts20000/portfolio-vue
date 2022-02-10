@@ -9,13 +9,13 @@
         </template>
 
         <v-list>
-          <v-list-item v-for="link in links" :key="link" :to="link.url">
+          <v-list-item v-for="link in links" :key="link.url" :to="link.url">
             <v-list-item-title>{{ link.label }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
 
-      <v-toolbar-title class="hidden-sm-and-down"
+      <v-toolbar-title to="/" class="hidden-sm-and-down"
         >Michelle Watts' Portfolio</v-toolbar-title
       >
 

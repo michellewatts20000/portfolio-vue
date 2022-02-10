@@ -1,47 +1,44 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row class="my-5">
       <v-col>
         <h1>Contact</h1>
         <v-form ref="signUpForm" v-model="formValidity">
           <v-text-field
+            label="Name"
+            type="text"
+            name="name"
+            v-model="name"
+            required
+          ></v-text-field>
+          <v-text-field
             label="Email"
             type="email"
+            name="email"
             v-model="email"
             :rules="emailRules"
             required
           ></v-text-field>
-          <v-autocomplete
-            label="Which browser do you use?"
-            :items="browsers"
-          ></v-autocomplete>
-          <v-file-input label="Attach profile picture"></v-file-input>
-          <v-text-field
-            v-model="birthday"
-            label="Birthday"
-            readonly
-          ></v-text-field>
-          <v-date-picker v-model="birthday"></v-date-picker>
-          <v-checkbox
-            label="Agree to terms & conditions"
-            v-model="agreeToTerms"
-            :rules="agreeToTermsRules"
+
+          <v-textarea
+            name="message"
+            v-model="message"
+            cols="30"
+            rows="5"
+            placeholder="Message"
             required
-          ></v-checkbox>
+          >
+          </v-textarea>
+
           <v-btn
             type="submit"
             color="primary"
             class="mr-4"
+            value="Send"
             :disabled="!formValidity"
             >Submit</v-btn
           >
-          <v-btn color="success" class="mr-4" @click="validateForm"
-            >Validate Form</v-btn
-          >
-          <v-btn color="warning" class="mr-4" @click="resetValidation"
-            >Reset Validation</v-btn
-          >
-          <v-btn color="error" @click="resetForm">Reset</v-btn>
+          <v-btn color="warning" @click="resetForm">Reset</v-btn>
         </v-form>
       </v-col>
     </v-row>
@@ -49,24 +46,16 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
 export default {
   data: () => ({
-    agreeToTerms: false,
-    agreeToTermsRules: [
-      (value) =>
-        !!value ||
-        "You must agree to the terms and conditions to sign up for an account.",
-    ],
-    birthday: "",
-    browsers: ["Chrome", "Firefox", "Safari", "Edge", "Brave"],
+    name: "",
     email: "",
+    message: "",
     emailRules: [
       (value) => !!value || "Email is required.",
       (value) => value.indexOf("@") !== 0 || "Email should have a username.",
       (value) => value.includes("@") || "Email should include an @ symbol.",
-      (value) =>
-        value.indexOf(".") - value.indexOf("@") > 1 ||
-        "Email should contain a valid domain.",
       (value) => value.includes(".") || "Email should include a period symbol.",
       (value) =>
         value.indexOf(".") <= value.length - 3 ||
@@ -78,11 +67,26 @@ export default {
     resetForm() {
       this.$refs.signUpForm.reset();
     },
-    resetValidation() {
-      this.$refs.signUpForm.resetValidation();
-    },
-    validateForm() {
-      this.$refs.signUpForm.validate();
+    sendEmail(e) {
+      try {
+        emailjs.sendForm(
+          "service_zkbnhdj",
+          "template_8eoy6gi",
+          e.target,
+          "user_eRiVJQWlEW4YWr0jVhl9u",
+          {
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          }
+        );
+      } catch (error) {
+        console.log({ error });
+      }
+      // Reset form field
+      this.name = "";
+      this.email = "";
+      this.message = "";
     },
   },
 };
