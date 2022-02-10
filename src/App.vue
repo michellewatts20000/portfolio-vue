@@ -15,9 +15,12 @@
         </v-list>
       </v-menu>
 
-      <v-toolbar-title to="/" class="hidden-sm-and-down"
+      <!-- <v-toolbar-title to="/" class="hidden-sm-and-down"
         >Michelle Watts' Portfolio</v-toolbar-title
-      >
+      > -->
+      <v-btn text rounded to="/">
+        <v-icon>{{ "mdi-home" }}</v-icon>
+      </v-btn>
 
       <v-spacer></v-spacer>
 
@@ -71,10 +74,10 @@ export default {
       drawer: null,
       show: false,
       links: [
-        {
-          label: "Home",
-          url: "/",
-        },
+        // {
+        //   label: "Home",
+        //   url: "/",
+        // },
         // {
         //   label: "About",
         //   url: "/about",
