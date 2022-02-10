@@ -14,7 +14,7 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  name: "App",
+  name: "About",
   data() {
     return {
       localCount: 5,

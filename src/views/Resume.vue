@@ -1,7 +1,7 @@
 <template>
-  <v-container>
-    <v-layout text-center wrap>
-      <v-flex xs12 my-5>
+  <v-container class="my-5">
+    <v-layout text-center wrap align-center justify-space-around>
+      <v-flex xs12 md6 mb-4>
         <h1 class="display-2 font-weight-bold mb-3">
           Hi! My name is Michelle.
         </h1>
@@ -21,6 +21,36 @@
           >{{ b.text }}
         </v-btn>
       </v-flex>
+
+      <!-- <v-flex xs8 md4>
+        <v-img
+          :src="require('../assets/profile-pic.jpeg')"
+          contain
+          class="rounded-circle my-3"
+          position="center center"
+          alt="profile-picture"
+        />
+      </v-flex> -->
     </v-layout>
   </v-container>
 </template>
+
+<script>
+export default {
+  name: "Resume",
+  data: () => ({
+    ctaBtn: [
+      {
+        text: "LinkedIn",
+        href: "https://www.linkedin.com/in/michelle-e-watts/",
+        color: "primary",
+      },
+      {
+        text: "GitHub",
+        href: "https://github.com/michellewatts20000",
+        color: "info",
+      },
+    ],
+  }),
+};
+</script>

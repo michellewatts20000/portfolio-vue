@@ -48,6 +48,7 @@
 <script>
 import emailjs from "emailjs-com";
 export default {
+  name: "Contact",
   data: () => ({
     name: "",
     email: "",
