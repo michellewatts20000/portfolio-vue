@@ -31,11 +31,6 @@ export default {
       this.$store.state.count -= 1;
     },
   },
-  // computed: {
-  //   count() {
-  //     return this.$store.state.count;
-  //   },
-  // },
   computed: mapState({
     // arrow functions can make the code very succinct!
     count: (state) => state.count,

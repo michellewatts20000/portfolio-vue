@@ -13,7 +13,7 @@
         </p>
 
         <v-btn
-          class="mx-2"
+          class="mx-2 black--text"
           :color="b.color"
           v-for="b in ctaBtn"
           :key="b.id"
