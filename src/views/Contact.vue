@@ -3,7 +3,11 @@
     <v-row class="my-5">
       <v-col>
         <h1>Contact</h1>
-        <v-form ref="signUpForm" v-model="formValidity">
+        <v-form
+          ref="signUpForm"
+          @submit.prevent="sendEmail"
+          v-model="formValidity"
+        >
           <v-text-field
             label="Name"
             type="text"
