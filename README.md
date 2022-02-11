@@ -1,5 +1,7 @@
 # vue-portfolio
 
+[Link to portfolio](https://michellewatts20000.github.io/portfolio-vue/)
+
 ## Project setup
 
 ```
