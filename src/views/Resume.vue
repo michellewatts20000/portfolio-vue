@@ -12,6 +12,8 @@
           clicking the portfolio link in the navigation.
         </p>
 
+        <!-- <h1>{{ count }}</h1> -->
+
         <v-btn
           class="mx-2"
           :color="b.color"
@@ -21,16 +23,6 @@
           >{{ b.text }}
         </v-btn>
       </v-flex>
-
-      <!-- <v-flex xs8 md4>
-        <v-img
-          :src="require('../assets/profile-pic.jpeg')"
-          contain
-          class="rounded-circle my-3"
-          position="center center"
-          alt="profile-picture"
-        />
-      </v-flex> -->
     </v-layout>
   </v-container>
 </template>

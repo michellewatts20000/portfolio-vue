@@ -2,8 +2,9 @@
   <v-container>
     <v-layout>
       <v-flex>
-        <h4>{{ count }}</h4>
-        <h1>{{ fullname }}</h1>
+        <h1>{{ fullName }}</h1>
+        <h4>{{ countAlias }}</h4>
+
         <v-btn @click="incrementCounter">Count Up</v-btn>
         <v-btn @click="decrementCounter">Count Down</v-btn>
       </v-flex>

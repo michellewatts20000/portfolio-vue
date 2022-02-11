@@ -9,7 +9,11 @@
         </template>
 
         <v-list>
-          <v-list-item v-for="link in links" :key="link.url" :to="link.url">
+          <v-list-item
+            v-for="link in links"
+            :key="link.url"
+            :to="{ name: link.label }"
+          >
             <v-list-item-title>{{ link.label }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -19,7 +23,7 @@
         >Michelle Watts' Portfolio</v-toolbar-title
       > -->
       <v-btn text rounded to="/">
-        <v-icon>{{ "mdi-home" }}</v-icon>
+        <v-icon>{{ 'mdi-home' }}</v-icon>
       </v-btn>
 
       <v-spacer></v-spacer>
@@ -29,13 +33,13 @@
         v-for="link in links"
         :key="`${link.label}-header-link`"
         text
-        :to="link.url"
+        :to="{ name: link.label }"
       >
         {{ link.label }}
       </v-btn>
       <v-btn @click="toggleTheme" text rounded>
         <v-icon @click="show = !show">{{
-          !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
+          !show ? 'mdi-moon-waning-crescent' : 'mdi-white-balance-sunny'
         }}</v-icon>
       </v-btn>
     </v-app-bar>
@@ -52,7 +56,7 @@
           text
           rounded
           class="my-2"
-          :to="link.url"
+          :to="{ name: link.label }"
         >
           {{ link.label }}
         </v-btn>
@@ -66,8 +70,9 @@
 </template>
 
 <script>
+// import { mapState } from "vuex";
 export default {
-  name: "App",
+  name: 'App',
 
   data() {
     return {
@@ -83,25 +88,25 @@ export default {
         //   url: "/about",
         // },
         {
-          label: "Portfolio",
-          url: "/portfolio",
+          label: 'Portfolio',
+          url: '/portfolio',
         },
         {
-          label: "Resume",
-          url: "/resume",
+          label: 'Resume',
+          url: '/resume',
         },
         {
-          label: "Contact",
-          url: "/contact",
+          label: 'Contact',
+          url: '/contact',
         },
       ],
-    };
+    }
   },
   methods: {
     toggleTheme() {
-      this.$vuetify.theme.themes.dark.anchor = "";
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      this.$vuetify.theme.themes.dark.anchor = ''
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark
     },
   },
-};
+}
 </script>
