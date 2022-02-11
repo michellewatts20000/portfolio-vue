@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar color="accent-4" dense app>
+    <v-app-bar color="primary" dense app>
       <v-menu left bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn class="hidden-md-and-up" icon v-bind="attrs" v-on="on">
@@ -18,12 +18,8 @@
           </v-list-item>
         </v-list>
       </v-menu>
-
-      <!-- <v-toolbar-title to="/" class="hidden-sm-and-down"
-        >Michelle Watts' Portfolio</v-toolbar-title
-      > -->
       <v-btn text rounded to="/">
-        <v-icon>{{ 'mdi-home' }}</v-icon>
+        <v-icon>{{ "mdi-home" }}</v-icon>
       </v-btn>
 
       <v-spacer></v-spacer>
@@ -39,7 +35,7 @@
       </v-btn>
       <v-btn @click="toggleTheme" text rounded>
         <v-icon @click="show = !show">{{
-          !show ? 'mdi-moon-waning-crescent' : 'mdi-white-balance-sunny'
+          !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
         }}</v-icon>
       </v-btn>
     </v-app-bar>
@@ -52,7 +48,7 @@
         <v-btn
           v-for="link in links"
           :key="`${link.label}-footer-link`"
-          color="white"
+          color=""
           text
           rounded
           class="my-2"
@@ -60,7 +56,7 @@
         >
           {{ link.label }}
         </v-btn>
-        <v-flex primary lighten-2 py-4 text-center white--text xs12>
+        <v-flex primary lighten-2 py-4 text-center xs12>
           {{ new Date().getFullYear() }} —
           <strong>Michelle Watts' Portfolio</strong>
         </v-flex>
@@ -72,41 +68,33 @@
 <script>
 // import { mapState } from "vuex";
 export default {
-  name: 'App',
+  name: "App",
 
   data() {
     return {
       drawer: null,
       show: false,
       links: [
-        // {
-        //   label: "Home",
-        //   url: "/",
-        // },
-        // {
-        //   label: "About",
-        //   url: "/about",
-        // },
         {
-          label: 'Portfolio',
-          url: '/portfolio',
+          label: "Portfolio",
+          url: "/portfolio",
         },
         {
-          label: 'Resume',
-          url: '/resume',
+          label: "Resume",
+          url: "/resume",
         },
         {
-          label: 'Contact',
-          url: '/contact',
+          label: "Contact",
+          url: "/contact",
         },
       ],
-    }
+    };
   },
   methods: {
     toggleTheme() {
-      this.$vuetify.theme.themes.dark.anchor = ''
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+      this.$vuetify.theme.themes.dark.anchor = "";
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
   },
-}
+};
 </script>
