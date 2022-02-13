@@ -1,7 +1,7 @@
 <template>
-  <v-container fill-height>
+  <v-container fill-height class="mt-3 mb-5">
     <v-row justify="center" align="center">
-      <v-col class="text-center" cols="12" md="8">
+      <v-col class="text-sm-center text-md-left text-center" cols="12" md="8">
         <h1 class="display-2 font-weight-bold mb-3">
           Hi! My name is Michelle.
         </h1>
@@ -22,7 +22,7 @@
         </v-btn>
       </v-col>
 
-      <v-col md="4" sm="4" cols="6">
+      <v-col md="3" sm="4" cols="6">
         <v-img
           :src="require('../assets/profile-pic.jpeg')"
           contain
