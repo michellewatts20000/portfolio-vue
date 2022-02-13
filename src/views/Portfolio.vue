@@ -4,7 +4,6 @@
       <v-card
         v-for="card in cards"
         :key="`${card.name}-header-link`"
-        :loading="loading"
         class="mx-auto my-4"
         max-width="374"
       >
