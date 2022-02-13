@@ -1,19 +1,19 @@
 <template>
-  <v-container class="my-5">
-    <v-layout text-center wrap align-center justify-space-around>
-      <v-flex xs12 md6 mb-4>
+  <v-container fluid class="my-5">
+    <v-layout text-center wrap align-center justify-space-around fill-height>
+      <v-flex xs12 md7 mb-4>
         <h1 class="display-2 font-weight-bold mb-3">
           Hi! My name is Michelle.
         </h1>
 
-        <p class="subheading font-weight-regular">
+        <h3 class="font-weight-regular mb-5">
           I am a Frontend Developer at Argenti. I have a background in
           graphic/web design and audio engineering. Check out some of my work by
           clicking the portfolio link in the navigation.
-        </p>
+        </h3>
 
         <v-btn
-          class="mx-2 black--text"
+          :class="`mx-2 ${b.textCol}--text`"
           :color="b.color"
           v-for="b in ctaBtn"
           :key="b.id"
@@ -22,7 +22,7 @@
         </v-btn>
       </v-flex>
 
-      <v-flex xs8 md4>
+      <v-flex xs7 md3>
         <v-img
           :src="require('../assets/profile-pic.jpeg')"
           contain
@@ -45,11 +45,13 @@ export default {
         text: "LinkedIn",
         href: "https://www.linkedin.com/in/michelle-e-watts/",
         color: "primary",
+        textCol: "white",
       },
       {
         text: "GitHub",
         href: "https://github.com/michellewatts20000",
         color: "info",
+        textCol: "black",
       },
     ],
   }),
