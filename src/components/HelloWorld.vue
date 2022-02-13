@@ -1,10 +1,19 @@
 <template>
   <v-container fill-height class="mt-3 mb-5">
-    <v-row justify="center" align="center">
-      <v-col class="text-sm-center text-md-left text-center" cols="12" md="8">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Hi! My name is Michelle.
-        </h1>
+    <v-row justify="space-around" align="center">
+      <v-col
+        order="2"
+        class="text-sm-center text-md-left text-center mb-5"
+        cols="12"
+        md="8"
+      >
+        <vue-typed-js
+          :strings="['Web Developer', 'Designer', 'Drummer', 'Web Developer']"
+        >
+          <h1 class="display-2 font-weight-bold mb-3">
+            Hi! My name is Michelle. I'm a <span class="typing"> </span>
+          </h1>
+        </vue-typed-js>
 
         <h3 class="font-weight-regular mb-5">
           I am a Frontend Developer at Argenti. I have a background in
@@ -22,7 +31,7 @@
         </v-btn>
       </v-col>
 
-      <v-col md="3" sm="4" cols="6">
+      <v-col order="1" lg="3" md="4" sm="4" cols="6">
         <v-img
           :src="require('../assets/profile-pic.jpeg')"
           contain
