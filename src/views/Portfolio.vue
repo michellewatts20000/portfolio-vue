@@ -18,7 +18,7 @@
         <v-card-actions>
           <v-btn :href="card.deployed" class="primary"> Deployed </v-btn>
           <v-spacer></v-spacer>
-          <v-btn :href="card.github" class="info"> GitHub </v-btn>
+          <v-btn :href="card.github" class="info black--text"> GitHub </v-btn>
         </v-card-actions>
       </v-card>
     </v-row>
