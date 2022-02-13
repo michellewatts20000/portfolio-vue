@@ -44,6 +44,8 @@
           >
           <v-btn color="warning" @click="resetForm">Reset</v-btn>
         </v-form>
+
+        <v-text-field v-model="thanks"></v-text-field>
       </v-col>
     </v-row>
   </v-container>
@@ -57,6 +59,7 @@ export default {
     name: "",
     email: "",
     message: "",
+    thanks: "",
     emailRules: [
       (value) => !!value || "Email is required.",
       (value) => value.indexOf("@") !== 0 || "Email should have a username.",
@@ -92,6 +95,7 @@ export default {
       this.name = "";
       this.email = "";
       this.message = "";
+      this.thanks = "Thanks for your email. I will be in touch shortly.";
     },
   },
 };
