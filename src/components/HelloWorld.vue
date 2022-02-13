@@ -1,14 +1,7 @@
 <template>
-  <v-container fluid class="my-5">
-    <v-layout
-      row
-      text-center
-      wrap
-      align-center
-      justify-space-around
-      fill-height
-    >
-      <v-flex xs12 md6 mb-4 mx-2>
+  <v-container fill-height>
+    <v-row justify="center" align="center">
+      <v-col class="text-center" cols="12" md="8">
         <h1 class="display-2 font-weight-bold mb-3">
           Hi! My name is Michelle.
         </h1>
@@ -20,16 +13,16 @@
         </h3>
 
         <v-btn
-          :class="`mx-2 ${b.textCol}--text`"
+          :class="`mr-2 ${b.textCol}--text`"
           :color="b.color"
           v-for="b in ctaBtn"
           :key="b.id"
           :href="b.href"
           >{{ b.text }}
         </v-btn>
-      </v-flex>
+      </v-col>
 
-      <v-flex xs7 md3>
+      <v-col md="4" sm="4" cols="6">
         <v-img
           :src="require('../assets/profile-pic.jpeg')"
           contain
@@ -37,8 +30,8 @@
           position="center center"
           alt="profile-picture"
         />
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
