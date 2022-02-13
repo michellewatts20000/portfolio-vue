@@ -56,10 +56,27 @@
         >
           {{ link.label }}
         </v-btn>
+
         <v-flex primary lighten-2 py-4 text-center black--text xs12>
           {{ new Date().getFullYear() }} —
           <strong>Michelle Watts' Portfolio</strong>
         </v-flex>
+        <v-btn
+          class="my-2"
+          href="https://github.com/michellewatts20000"
+          text
+          rounded
+        >
+          <v-icon>{{ "mdi-github" }}</v-icon>
+        </v-btn>
+        <v-btn
+          class="my-2"
+          href="https://www.linkedin.com/in/michelle-e-watts/"
+          text
+          rounded
+        >
+          <v-icon>{{ "mdi-linkedin" }}</v-icon>
+        </v-btn>
       </v-layout>
     </v-footer>
   </v-app>

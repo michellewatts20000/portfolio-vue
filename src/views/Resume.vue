@@ -6,10 +6,10 @@
           Hi! My name is Michelle.
         </h1>
 
-        <p class="subheading font-weight-regular">
+        <h3 class="font-weight-regular mb-5">
           I am a Full Stack web developer utilising a background in graphic
           design to bring creative approaches to problem solving and UX.
-        </p>
+        </h3>
 
         <v-btn
           class="mx-2 white--text mb-10"
@@ -19,6 +19,22 @@
           :href="b.href"
           >{{ b.text }}
         </v-btn>
+        <div class="text-center mb-10">
+          <v-chip class="ma-2" color="primary" outlined>
+            <v-icon left> mdi-server-plus </v-icon>
+            JavaScript ES6+, CSS3, HTML5, SQL, NoSQL
+          </v-chip>
+
+          <v-chip class="ma-2" color="primary" outlined pill>
+            GitHub, MongoDB, MySQL
+            <v-icon right> mdi-account-outline </v-icon>
+          </v-chip>
+
+          <v-chip class="ma-2" color="primary" outlined>
+            <v-icon left> mdi-wrench </v-icon>
+            Chakra, Express, React, Vue, Node.js, Handlebars, JQuery, Bootstrap
+          </v-chip>
+        </div>
 
         <v-card class="mb-10">
           <!-- <v-toolbar flat dark>
@@ -78,22 +94,6 @@
             </v-tab-item>
           </v-tabs>
         </v-card>
-        <div class="text-center">
-          <v-chip class="ma-2" color="primary" outlined>
-            <v-icon left> mdi-server-plus </v-icon>
-            JavaScript ES6+, CSS3, HTML5, SQL, NoSQL
-          </v-chip>
-
-          <v-chip class="ma-2" color="primary" outlined pill>
-            GitHub, MongoDB, MySQL
-            <v-icon right> mdi-account-outline </v-icon>
-          </v-chip>
-
-          <v-chip class="ma-2" color="primary" outlined>
-            <v-icon left> mdi-wrench </v-icon>
-            Chakra, Express, React, Vue, Node.js, Handlebars, JQuery, Bootstrap
-          </v-chip>
-        </div>
       </v-flex>
     </v-layout>
   </v-container>

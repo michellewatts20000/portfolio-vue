@@ -1,7 +1,14 @@
 <template>
   <v-container fluid class="my-5">
-    <v-layout text-center wrap align-center justify-space-around fill-height>
-      <v-flex xs12 md7 mb-4>
+    <v-layout
+      row
+      text-center
+      wrap
+      align-center
+      justify-space-around
+      fill-height
+    >
+      <v-flex xs12 md6 mb-4 mx-2>
         <h1 class="display-2 font-weight-bold mb-3">
           Hi! My name is Michelle.
         </h1>
