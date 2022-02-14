@@ -59,8 +59,8 @@ export default {
       {
         text: "GitHub",
         href: "https://github.com/michellewatts20000",
-        color: "info",
-        textCol: "black",
+        color: "secondary",
+        textCol: "white",
       },
     ],
   }),

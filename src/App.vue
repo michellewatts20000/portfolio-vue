@@ -43,7 +43,7 @@
     <v-content>
       <router-view></router-view>
     </v-content>
-    <v-footer color="primary lighten-1 black--text" padless>
+    <v-footer color="primary lighten-1" padless>
       <v-layout justify-center wrap>
         <v-btn
           v-for="link in links"
@@ -57,7 +57,7 @@
           {{ link.label }}
         </v-btn>
 
-        <v-flex primary lighten-2 py-4 text-center black--text xs12>
+        <v-flex primary lighten-2 py-4 text-center xs12>
           {{ new Date().getFullYear() }} —
           <strong>Michelle Watts' Portfolio</strong>
         </v-flex>
