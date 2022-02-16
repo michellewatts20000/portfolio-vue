@@ -42,7 +42,7 @@
             :disabled="!formValidity"
             >Submit</v-btn
           >
-          <v-btn color="info black--text" @click="resetForm">Reset</v-btn>
+          <v-btn color="secondary white--text" @click="resetForm">Reset</v-btn>
         </v-form>
         <v-alert type="success" v-if="thanks" class="mt-5"
           >Thanks for reaching out, I will reply to your email shortly.</v-alert

@@ -20,24 +20,24 @@
           >{{ b.text }}
         </v-btn>
         <div class="text-center mb-10">
-          <v-chip class="ma-2" color="primary" outlined>
+          <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-server-plus </v-icon>
             JavaScript ES6+, CSS3, HTML5, SQL, NoSQL
           </v-chip>
 
-          <v-chip class="ma-2" color="primary" outlined pill>
+          <v-chip class="ma-2" color="info" outlined pill>
             GitHub, MongoDB, MySQL
             <v-icon right> mdi-account-outline </v-icon>
           </v-chip>
 
-          <v-chip class="ma-2" color="primary" outlined>
+          <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-wrench </v-icon>
             Chakra, Express, React, Vue, Node.js, Handlebars, JQuery, Bootstrap
           </v-chip>
         </div>
 
         <v-card class="mb-10">
-          <v-tabs horizontal>
+          <v-tabs color="info" horizontal>
             <v-tab>
               <v-icon left> mdi-account-group </v-icon>
               Team-orienated
