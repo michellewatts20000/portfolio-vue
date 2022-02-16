@@ -37,10 +37,7 @@
         </div>
 
         <v-card class="mb-10">
-          <!-- <v-toolbar flat dark>
-            <v-toolbar-title>User Profile</v-toolbar-title>
-          </v-toolbar> -->
-          <v-tabs vertical>
+          <v-tabs horizontal>
             <v-tab>
               <v-icon left> mdi-account-group </v-icon>
               Team-orienated

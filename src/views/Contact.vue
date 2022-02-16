@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-row class="my-5">
-      <v-col>
-        <h1>Contact</h1>
+    <v-row class="my-5" justify="center">
+      <v-col cols="10" sm="8" md="8" lg="6">
+        <h1 class="display-2 font-weight-bold mb-3">Contact Me</h1>
         <v-form
           ref="signUpForm"
           @submit.prevent="sendEmail"

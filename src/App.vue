@@ -40,9 +40,11 @@
       </v-btn>
     </v-app-bar>
 
-    <v-content>
-      <router-view></router-view>
-    </v-content>
+    <v-main>
+      <v-fade-transition mode="out-in">
+        <router-view />
+      </v-fade-transition>
+    </v-main>
     <v-footer color="primary lighten-1" padless>
       <v-layout justify-center wrap>
         <v-btn
