@@ -2,7 +2,7 @@
   <v-container>
     <v-row class="my-5" justify="center">
       <v-col cols="10" sm="8" md="8" lg="6">
-        <h1 class="display-2 font-weight-bold mb-3">Contact Me</h1>
+        <h1 class="display-2 mb-3">Contact Me</h1>
         <v-form
           ref="signUpForm"
           @submit.prevent="sendEmail"
@@ -37,12 +37,14 @@
           <v-btn
             type="submit"
             color="primary"
-            class="mr-4"
+            class="mr-4 subtitle-2"
             value="Send"
             :disabled="!formValidity"
             >Submit</v-btn
           >
-          <v-btn color="secondary white--text" @click="resetForm">Reset</v-btn>
+          <v-btn color="secondary white--text subtitle-2" @click="resetForm"
+            >Reset</v-btn
+          >
         </v-form>
         <v-alert type="success" v-if="thanks" class="mt-5"
           >Thanks for reaching out, I will reply to your email shortly.</v-alert

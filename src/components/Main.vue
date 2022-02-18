@@ -10,19 +10,19 @@
         <vue-typed-js
           :strings="['Web Developer', 'Designer', 'Drummer', 'Web Developer']"
         >
-          <h1 class="display-2 font-weight-bold mb-3">
+          <div class="display-2 mb-3">
             Hi! My name is Michelle. I'm a <span class="typing"> </span>
-          </h1>
+          </div>
         </vue-typed-js>
 
-        <h3 class="font-weight-regular mb-5">
+        <div class="subtitle-1 mb-5">
           I am a Frontend Developer at Argenti. I have a background in
           graphic/web design and audio engineering. Check out some of my work by
           clicking the portfolio link in the navigation.
-        </h3>
+        </div>
 
         <v-btn
-          :class="`mr-2 ${b.textCol}--text`"
+          :class="`mr-2 ${b.textCol}--text subtitle-2`"
           :color="b.color"
           v-for="b in ctaBtn"
           :key="b.id"
@@ -66,3 +66,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped lang="scss">
+::v-deep .display-2 {
+  font-size: 250px;
+}
+</style>

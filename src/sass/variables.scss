@@ -1,3 +1,88 @@
-// ADS overrides
+// @import "~vuetify/src/styles/styles.sass";
+
 $body-font-family: "Montserrat", Helvetica, Arial, sans-serif;
 $heading-font-family: "Montserrat", Helvetica, Arial, sans-serif;
+$ads-navy: #041e42;
+$white: #ffffff;
+
+div.v-application {
+  font-size: 20px;
+
+  //   .display-4 {
+  //     font-size: 6rem;
+  //     font-weight: 400;
+  //     line-height: 7.5rem;
+  //   }
+
+  //   .display-3 {
+  //     font-size: 3.75rem;
+  //     font-weight: 400;
+  //     line-height: 4.6875rem;
+  //   }
+
+  .display-2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 3.75rem;
+  }
+
+  .display-1 {
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+
+  .heading-custom {
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 4.25rem;
+  }
+
+  //   .headline {
+  //     font-size: 1.5rem;
+  //     font-weight: 700;
+  //     line-height: 1.875rem;
+  //   }
+
+  //   .title {
+  //     font-size: 1.25rem;
+  //     font-weight: 700;
+  //     line-height: 1.5625rem;
+  //   }
+
+  //   .subtitle-1 {
+  //     font-size: 1rem;
+  //     font-weight: 700;
+  //     line-height: 1.5rem;
+  //   }
+
+  //   .body-1 {
+  //     font-size: 1rem;
+  //     font-weight: 400;
+  //     line-height: 1.5rem;
+  //   }
+
+  //   .subtitle-2 {
+  //     font-size: 0.875rem;
+  //     font-weight: 700;
+  //     line-height: 1.0625rem;
+  //   }
+
+  //   .body-2 {
+  //     font-size: 0.875rem;
+  //     font-weight: 400;
+  //     line-height: 1.0625rem;
+  //   }
+
+  //   .caption {
+  //     font-size: 0.75rem;
+  //     font-weight: 400;
+  //     line-height: 1rem;
+  //   }
+
+  //   .hyperlink {
+  //     font-size: 1rem;
+  //     font-weight: 400;
+  //     line-height: 1.5rem;
+  //   }
+}

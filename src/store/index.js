@@ -26,7 +26,7 @@ export default new Vuex.Store({
     ],
     colors: ["red", "blue", "green", "black", "yellow", "purple", "white"],
     objects: ["domain", "star", "home", "car"],
-    sizes: ["large", "medium", "small", "x-large"],
+    sizes: ["10", "25", "50", "75", "100"],
   },
   getters: {
     doubleCount(state) {

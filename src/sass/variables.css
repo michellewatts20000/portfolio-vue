@@ -1,1 +1,22 @@
-/* No CSS *//*# sourceMappingURL=variables.css.map */
+div.v-application {
+  font-size: 20px;
+}
+
+div.v-application .display-2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 3.75rem;
+}
+
+div.v-application .display-1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+div.v-application .heading-custom {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 4.25rem;
+}
+/*# sourceMappingURL=variables.css.map */

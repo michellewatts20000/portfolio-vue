@@ -8,16 +8,20 @@
         max-width="374"
       >
         <v-img height="250" :src="require(`@/assets/${card.url}`)"></v-img>
-        <v-card-title>{{ card.name }}</v-card-title>
-        <v-card-text>
+        <v-card-title class="title">{{ card.name }}</v-card-title>
+        <v-card-text class="body-2">
           <div>
             {{ card.description }}
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-btn :href="card.deployed" class="primary"> Deployed </v-btn>
+          <v-btn :href="card.deployed" class="primary subtitle-2">
+            Deployed
+          </v-btn>
           <v-spacer></v-spacer>
-          <v-btn :href="card.github" class="secondary"> GitHub </v-btn>
+          <v-btn :href="card.github" class="secondary subtitle-2">
+            GitHub
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-row>

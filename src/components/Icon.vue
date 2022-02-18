@@ -7,7 +7,11 @@
 <script>
 export default {
   name: "icon",
-  props: ["object", "size", "color"],
+  props: {
+    object: { type: String, default: "domain" },
+    size: { type: String, default: "40" },
+    color: {},
+  },
 };
 </script>
 
