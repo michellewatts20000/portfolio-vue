@@ -26,6 +26,7 @@
           :color="b.color"
           v-for="b in ctaBtn"
           :key="b.id"
+          :to="b.href"
           :href="b.href"
           >{{ b.text }}
         </v-btn>
@@ -51,17 +52,29 @@ export default {
   data: () => ({
     ctaBtn: [
       {
-        text: "LinkedIn",
-        href: "https://www.linkedin.com/in/michelle-e-watts/",
+        text: "Portfolio",
+        href: "/portfolio",
         color: "primary",
         textCol: "white",
       },
       {
-        text: "GitHub",
-        href: "https://github.com/michellewatts20000",
+        text: "Resume",
+        href: "/resume",
         color: "secondary",
         textCol: "white",
       },
+      // {
+      //   text: "LinkedIn",
+      //   href: "https://www.linkedin.com/in/michelle-e-watts/",
+      //   color: "primary",
+      //   textCol: "white",
+      // },
+      // {
+      //   text: "GitHub",
+      //   href: "https://github.com/michellewatts20000",
+      //   color: "secondary",
+      //   textCol: "white",
+      // },
     ],
   }),
 };

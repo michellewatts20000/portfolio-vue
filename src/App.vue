@@ -1,7 +1,45 @@
 <template>
   <v-app>
+    <!-- <v-app-bar color="primary" dense app> -->
+
+    <!-- <v-system-bar color="primary lighten-2"></v-system-bar> -->
+
     <v-app-bar color="primary" dense app>
-      <v-menu left bottom>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon @click="toggleTheme" text rounded>
+        <v-icon @click="show = !show">{{
+          !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
+        }}</v-icon>
+      </v-btn>
+
+      <v-btn icon to="/">
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
+
+      <!-- <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn> -->
+    </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" absolute bottom temporary>
+      <v-list nav dense>
+        <v-list-item-group v-model="group" active-class="text--accent-4">
+          <v-list-item
+            exact
+            v-for="link in links"
+            :key="link.url"
+            :to="{ name: link.label }"
+          >
+            <v-list-item-title>{{ link.label }}</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+
+    <!-- <v-menu left bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn class="hidden-md-and-up" icon v-bind="attrs" v-on="on">
             <v-app-bar-nav-icon> </v-app-bar-nav-icon>
@@ -37,8 +75,8 @@
         <v-icon @click="show = !show">{{
           !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
         }}</v-icon>
-      </v-btn>
-    </v-app-bar>
+      </v-btn> -->
+    <!-- </v-app-bar> -->
 
     <v-main>
       <v-fade-transition mode="out-in">
@@ -48,6 +86,7 @@
     <v-footer color="primary lighten-1" padless>
       <v-layout justify-center wrap>
         <v-btn
+          exact
           v-for="link in links"
           :key="`${link.label}-footer-link`"
           color=""
@@ -91,8 +130,13 @@ export default {
   data() {
     return {
       drawer: null,
+      group: null,
       show: false,
       links: [
+        {
+          label: "Home",
+          url: "/",
+        },
         {
           label: "Portfolio",
           url: "/portfolio",
@@ -114,7 +158,12 @@ export default {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
   },
+  watch: {
+    group() {
+      this.drawer = false;
+    },
+  },
 };
 </script>
 
-<style lang="sass"></style>
+<style lang="css"></style>
