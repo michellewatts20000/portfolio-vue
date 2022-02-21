@@ -1,14 +1,9 @@
 <template>
   <v-app>
-    <!-- <v-app-bar color="primary" dense app> -->
-
-    <!-- <v-system-bar color="primary lighten-2"></v-system-bar> -->
-
+    <v-system-bar color="primary lighten-2"></v-system-bar>
     <v-app-bar color="primary" dense app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
       <v-spacer></v-spacer>
-
       <v-btn icon @click="toggleTheme" text rounded>
         <v-icon @click="show = !show">{{
           !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
