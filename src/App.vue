@@ -18,13 +18,9 @@
       <v-btn icon to="/">
         <v-icon>mdi-home</v-icon>
       </v-btn>
-
-      <!-- <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn> -->
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute bottom temporary>
+    <v-navigation-drawer v-model="drawer" bottom temporary app>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="text--accent-4">
           <v-list-item

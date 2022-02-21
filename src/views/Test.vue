@@ -1,16 +1,16 @@
 <template>
-  <v-container my-10>
+  <v-container my-5>
     <v-row class="mx-5" align="center" justify="center">
       <v-col lg="8" md="8" sm="12" xs="12">
-        <div>
+        <!-- <div>
           {{ result }}
-        </div>
-        <v-btn
+        </div> -->
+        <!-- <v-btn
           class="mt-5 subtitle-1 primary"
           :loading="loading"
           @click="getJoke"
           >Get Joke</v-btn
-        >
+        > -->
 
         <!-- <div v-for="(todo, index) in todos" :key="index">
           <li>{{ todo.title }}</li>
