@@ -10,11 +10,7 @@ export default new Vuex.Store({
     loading: false,
     waveArray: [],
     count: 0,
-    todos: [
-      { text: "Learn JavaScript" },
-      { text: "Learn Vue" },
-      { text: "Build something awesome" },
-    ],
+    todos: [],
     categories: [
       "sustainability",
       "nature",
@@ -104,6 +100,9 @@ export default new Vuex.Store({
     SET_RESULT(state, result) {
       state.result = result;
     },
+    // SET_TODOS(state, result) {
+    //   state.todos = result;
+    // },
     loading(state, newLoading) {
       state.loading = newLoading;
     },
@@ -117,7 +116,6 @@ export default new Vuex.Store({
     },
     getJoke({ commit }) {
       commit("loading", true);
-
       axios
         .get("https://funny-joke-dataset.p.rapidapi.com/users", {
           headers: {
@@ -131,7 +129,11 @@ export default new Vuex.Store({
           console.log(find);
           commit("loading", false);
           commit("SET_RESULT", find);
-        });
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(console.log("Done!"));
     },
   },
   modules: {},

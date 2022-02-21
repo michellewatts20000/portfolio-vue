@@ -36,7 +36,7 @@ export default {
       show: false,
       cards: [
         {
-          name: "Unpaid overtime calculator",
+          name: "Unpaid Overtime Calculator",
           url: "unpaid-ot.png",
           description:
             "A full-stack app that calculates the amount of unpaid hours and salary you have worked over one year. It's more then you think.",
@@ -44,7 +44,7 @@ export default {
           github: "https://github.com/michellewatts20000/unpaid-overtime-calc",
         },
         {
-          name: "What's in my pantry?",
+          name: "What's in my Pantry?",
           url: "pantry.png",
           description:
             "What's in my pantry is an easy to use, all-in-one recipe search app that will display recipes based on a list of food items that are currently in your pantry.",
@@ -68,7 +68,7 @@ export default {
           github: "https://github.com/michellewatts20000/note-taker",
         },
         {
-          name: "Weather dashboard",
+          name: "Weather Dashboard",
           url: "weather.png",
           description:
             "The weather dashboard is an app that gives you the current weather and UV index for a place you search for and a 5 day forecast.",

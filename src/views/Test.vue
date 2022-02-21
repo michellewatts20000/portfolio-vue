@@ -9,8 +9,18 @@
           class="mt-5 subtitle-1 primary"
           :loading="loading"
           @click="getJoke"
-          >Get Joke 2.0</v-btn
+          >Get Joke</v-btn
         >
+
+        <!-- <div v-for="(todo, index) in todos" :key="index">
+          <li>{{ todo.title }}</li>
+        </div>
+        <v-btn
+          class="mt-5 subtitle-1 primary"
+          :loading="loading"
+          @click="getToDo"
+          >Get Todo 2.0</v-btn
+        > -->
 
         <div class="mt-10 display-1">Word Play</div>
         <v-text-field v-model="message" label="type anything" type="text">
@@ -106,6 +116,9 @@ export default {
     getJoke() {
       this.$store.dispatch("getJoke");
     },
+    // getToDo() {
+    //   this.$store.dispatch("getToDo");
+    // },
     zeroVowels() {
       this.$store.commit("vowels");
     },

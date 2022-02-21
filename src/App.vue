@@ -152,6 +152,11 @@ export default {
           icon: "mdi-text-box-outline",
         },
         {
+          label: "Weather",
+          url: "/weather",
+          icon: "mdi-apple-icloud",
+        },
+        {
           label: "Contact",
           url: "/contact",
           icon: "mdi-email",
@@ -161,7 +166,7 @@ export default {
   },
   methods: {
     toggleTheme() {
-      this.$vuetify.theme.themes.dark.anchor = "";
+      // this.$vuetify.theme.themes.dark.anchor = "";
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
   },
