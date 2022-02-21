@@ -33,6 +33,9 @@
             :key="link.url"
             :to="{ name: link.label }"
           >
+            <v-list-item-icon>
+              <v-icon v-text="link.icon"></v-icon>
+            </v-list-item-icon>
             <v-list-item-title>{{ link.label }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
@@ -136,18 +139,22 @@ export default {
         {
           label: "Home",
           url: "/",
+          icon: "mdi-home",
         },
         {
           label: "Portfolio",
           url: "/portfolio",
+          icon: "mdi-palette",
         },
         {
           label: "Resume",
           url: "/resume",
+          icon: "mdi-text-box-outline",
         },
         {
           label: "Contact",
           url: "/contact",
+          icon: "mdi-email",
         },
       ],
     };
