@@ -80,8 +80,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-::v-deep .display-2 {
-  font-size: 250px;
-}
-</style>
+<style scoped lang="scss"></style>

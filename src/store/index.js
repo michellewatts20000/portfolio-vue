@@ -1,16 +1,22 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import axios from "axios";
+import moduleTodos from "./modules/todos";
+
+// import axios from "axios";
+// import { notesCollection } from "../services/firebase";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   strict: true,
+  modules: {
+    moduleTodos,
+  },
   state: {
     loading: false,
     waveArray: [],
     count: 0,
-    todos: [],
+    allNotes: [],
     categories: [
       "sustainability",
       "nature",
@@ -26,7 +32,6 @@ export default new Vuex.Store({
     posts: [],
     result: "",
     message: "",
-    apiKey: "bcfe6b08dcmsh6ed06ffa591d054p14d4b0jsn565c23c38d4f",
   },
   getters: {
     doubleCount(state) {
@@ -100,9 +105,6 @@ export default new Vuex.Store({
     SET_RESULT(state, result) {
       state.result = result;
     },
-    // SET_TODOS(state, result) {
-    //   state.todos = result;
-    // },
     loading(state, newLoading) {
       state.loading = newLoading;
     },
@@ -114,27 +116,5 @@ export default new Vuex.Store({
     timesTwo({ commit }) {
       commit("timesTwo");
     },
-    getJoke({ commit }) {
-      commit("loading", true);
-      axios
-        .get("https://funny-joke-dataset.p.rapidapi.com/users", {
-          headers: {
-            "x-rapidapi-host": "funny-joke-dataset.p.rapidapi.com",
-            "x-rapidapi-key":
-              "bcfe6b08dcmsh6ed06ffa591d054p14d4b0jsn565c23c38d4f",
-          },
-        })
-        .then((response) => {
-          let find = response.data.users[Math.floor(Math.random() * 1000)].body;
-          console.log(find);
-          commit("loading", false);
-          commit("SET_RESULT", find);
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-        .finally(console.log("Done!"));
-    },
   },
-  modules: {},
 });

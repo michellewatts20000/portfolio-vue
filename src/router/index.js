@@ -38,6 +38,11 @@ const routes = [
     component: () => import("../views/Weather.vue"),
   },
   {
+    path: "/todo",
+    name: "Todo",
+    component: () => import("../views/Todo.vue"),
+  },
+  {
     path: "*",
     name: "NotFound",
     component: () => import("../views/NotFound.vue"),
