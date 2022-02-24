@@ -1,5 +1,5 @@
 <template>
-  <v-container class="my-5">
+  <v-container>
     <v-row>
       <v-card
         v-for="card in cards"

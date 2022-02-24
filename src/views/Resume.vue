@@ -1,5 +1,5 @@
 <template>
-  <v-container class="my-5">
+  <v-container>
     <v-layout text-center wrap align-center justify-space-around>
       <v-flex xs12 md8 mb-10>
         <div class="display-2 mb-3">Hi! My name is Michelle.</div>

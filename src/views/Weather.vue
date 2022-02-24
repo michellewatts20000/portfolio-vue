@@ -1,5 +1,5 @@
 <template>
-  <v-container class="my-5">
+  <v-container>
     <div class="text-center display-2 mb-3">Weather dashboard</div>
     <v-select v-model="city" label="Select a city" :items="items"></v-select>
     <v-btn class="primary" @click="getData">Get Weather</v-btn>

@@ -2,13 +2,10 @@ import Vue from "vue";
 import Vuex from "vuex";
 import moduleTodos from "./modules/todos";
 
-// import axios from "axios";
-// import { notesCollection } from "../services/firebase";
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  strict: true,
+  strict: false,
   modules: {
     moduleTodos,
   },
@@ -17,15 +14,6 @@ export default new Vuex.Store({
     waveArray: [],
     count: 0,
     allNotes: [],
-    categories: [
-      "sustainability",
-      "nature",
-      "animal welfare",
-      "housing",
-      "education",
-      "food",
-      "community",
-    ],
     colors: ["red", "blue", "green", "black", "yellow", "purple", "white"],
     objects: ["domain", "star", "home", "car"],
     sizes: ["10", "25", "50", "75", "100"],
@@ -36,9 +24,6 @@ export default new Vuex.Store({
   getters: {
     doubleCount(state) {
       return state.count * 2;
-    },
-    shop(state) {
-      return "The shop number is " + state.shopNumber;
     },
     loading(state) {
       return state.loading;

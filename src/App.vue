@@ -32,50 +32,11 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-
-    <!-- <v-menu left bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn class="hidden-md-and-up" icon v-bind="attrs" v-on="on">
-            <v-app-bar-nav-icon> </v-app-bar-nav-icon>
-          </v-btn>
-        </template>
-
-        <v-list>
-          <v-list-item
-            v-for="link in links"
-            :key="link.url"
-            :to="{ name: link.label }"
-          >
-            <v-list-item-title>{{ link.label }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-      <v-btn text rounded to="/">
-        <v-icon>{{ "mdi-home" }}</v-icon>
-      </v-btn>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        class="hidden-sm-and-down"
-        v-for="link in links"
-        :key="`${link.label}-header-link`"
-        text
-        :to="{ name: link.label }"
-      >
-        {{ link.label }}
-      </v-btn>
-      <v-btn @click="toggleTheme" text rounded>
-        <v-icon @click="show = !show">{{
-          !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
-        }}</v-icon>
-      </v-btn> -->
-    <!-- </v-app-bar> -->
-
-    <v-main>
+    <v-main class="pa-10">
       <v-fade-transition mode="out-in">
         <router-view />
       </v-fade-transition>
+      <snackbar />
     </v-main>
     <v-footer color="primary lighten-1" padless>
       <v-layout justify-center wrap>
@@ -118,9 +79,12 @@
 </template>
 
 <script>
+import snackbar from "./components/Global/Snackbar.vue";
 export default {
   name: "App",
-
+  components: {
+    snackbar,
+  },
   data() {
     return {
       drawer: null,

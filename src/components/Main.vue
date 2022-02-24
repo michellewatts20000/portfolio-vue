@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height class="mt-3 mb-5">
+  <v-container fill-height>
     <v-row justify="space-around" align="center">
       <v-col
         order="2"
@@ -48,7 +48,6 @@
 <script>
 export default {
   name: "Main",
-
   data: () => ({
     ctaBtn: [
       {
@@ -63,21 +62,7 @@ export default {
         color: "secondary",
         textCol: "white",
       },
-      // {
-      //   text: "LinkedIn",
-      //   href: "https://www.linkedin.com/in/michelle-e-watts/",
-      //   color: "primary",
-      //   textCol: "white",
-      // },
-      // {
-      //   text: "GitHub",
-      //   href: "https://github.com/michellewatts20000",
-      //   color: "secondary",
-      //   textCol: "white",
-      // },
     ],
   }),
 };
 </script>
-
-<style scoped lang="scss"></style>
