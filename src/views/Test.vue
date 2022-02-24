@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-row class="mx-5" align="center" justify="center">
+  <v-container fill-height>
+    <v-row justify="space-around" align="center">
       <v-col lg="8" md="8" sm="12" xs="12">
         <div class="mt-10 display-1">Word Play</div>
         <v-text-field v-model="message" label="type anything" type="text">

@@ -1,10 +1,10 @@
 <template>
-  <v-container>
+  <v-container fill-height>
     <v-row>
       <v-col>
-        <h1 class="display-2 font-weight-bold mb-3">
-          Sorry, that page does not exist.
-        </h1>
+        <div class="title font-weight-bold mb-3 text-center">
+          Sorry, the page you are looking for does not exist.
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -13,5 +13,3 @@
 <script>
 export default {};
 </script>
-
-<style></style>

@@ -1,7 +1,7 @@
 <template>
-  <v-container>
-    <v-layout text-center wrap align-center justify-space-around>
-      <v-flex xs12 md8 mb-10>
+  <v-container fill-height>
+    <v-row justify="space-around" class="text-center" align="center">
+      <v-col cols="12" lg="8">
         <div class="display-2 mb-3">Hi! My name is Michelle.</div>
 
         <div class="subtitle-1 mb-5">
@@ -107,8 +107,8 @@
             </v-tab-item>
           </v-tabs>
         </v-card>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
