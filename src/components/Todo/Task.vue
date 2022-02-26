@@ -16,7 +16,12 @@
             {{ task.title }}
           </v-list-item-title>
         </v-list-item-content>
-
+        <v-list-item-action v-if="task.dueDate">
+          <v-list-item-action-text>
+            <v-icon small>mdi-calendar</v-icon>
+            {{ formatDate(task.dueDate) }}</v-list-item-action-text
+          >
+        </v-list-item-action>
         <v-list-item-action>
           <TaskMenu :task="task" />
         </v-list-item-action>
@@ -28,11 +33,21 @@
 
 <script>
 import TaskMenu from "./TaskMenu.vue";
+import moment from "moment";
+// import helpers from "../../services/helpers";
+
 export default {
   name: "task",
   props: ["task"],
   components: {
     TaskMenu,
+  },
+  methods: {
+    formatDate(value) {
+      if (value) {
+        return moment(String(value)).format("MMMM Do YYYY");
+      }
+    },
   },
 };
 </script>

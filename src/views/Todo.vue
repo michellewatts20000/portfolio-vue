@@ -2,6 +2,7 @@
   <v-container fill-height>
     <v-row justify="space-around" align="center">
       <v-col cols="12" lg="8">
+        <div class="display-2 text-center mb-3">Add a Todo</div>
         <textfield />
         <todolist v-if="$store.state.moduleTodos.tasks.length" />
         <notask v-else />

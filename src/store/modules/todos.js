@@ -1,11 +1,37 @@
 const moduleTodos = {
   namespaced: true,
-  state: { tasks: [], snackbar: { show: false, text: "" } },
+  state: {
+    tasks: [
+      {
+        id: 1,
+        title: "Wake up",
+        done: false,
+        dueDate: "2020-10-16",
+      },
+      {
+        id: 2,
+        title: "Get bananas",
+        done: false,
+        dueDate: "2020-10-17",
+      },
+      {
+        id: 3,
+        title: "Eat bananas",
+        done: false,
+        dueDate: null,
+      },
+    ],
+    snackbar: { show: false, text: "" },
+  },
   getters: {},
   mutations: {
     updateTaskTitle(state, payload) {
       let task = state.tasks.filter((task) => task.id === payload.id)[0];
       task.title = payload.title;
+    },
+    updateTaskDueDate(state, payload) {
+      let task = state.tasks.filter((task) => task.id === payload.id)[0];
+      task.dueDate = payload.dueDate;
     },
     hideSnack(state) {
       state.snackbar.show = false;
@@ -26,6 +52,7 @@ const moduleTodos = {
         id: Date.now(),
         title: newTaskTitle,
         done: false,
+        dueDate: null,
       };
       state.tasks.push(newTask);
     },
@@ -49,6 +76,10 @@ const moduleTodos = {
     updateTaskTitle({ commit }, payload) {
       commit("updateTaskTitle", payload);
       commit("showSnackbar", "Task Edited!");
+    },
+    updateTaskDueDate({ commit }, payload) {
+      commit("updateTaskDueDate", payload);
+      commit("showSnackbar", "Due Date Updated!");
     },
   },
 };
