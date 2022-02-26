@@ -8,7 +8,9 @@
           label="Select a city"
           :items="items"
         ></v-select>
-        <v-btn class="primary" @click="getData">Get Weather</v-btn>
+        <v-btn class="primary" :loading="isLoading" @click="getWeather"
+          >Get Weather</v-btn
+        >
       </v-col>
     </v-row>
     <v-row>
@@ -18,7 +20,6 @@
         class="mx-auto my-4"
         width="300"
       >
-        <!-- <p>{{ w.dt_txt }}</p> -->
         <v-list-item two-line>
           <v-list-item-content>
             <v-list-item-title class="title">
@@ -67,18 +68,17 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 import moment from "moment";
+import { mapState } from "vuex";
 export default {
   name: "Weather",
   data() {
     return {
       suffix: "@2x.png",
       city: "",
-      cityres: "",
-      key: "844421298d794574c100e3409cee0499",
-      weather: [],
       items: ["Sydney", "New York", "Paris", "London"],
+      key: "844421298d794574c100e3409cee0499",
     };
   },
 
@@ -88,23 +88,23 @@ export default {
         return moment(String(value)).format("MMMM Do YYYY, ha");
       }
     },
-    getData() {
-      axios
-        .get(
-          "https://api.openweathermap.org/data/2.5/forecast?q=" +
-            this.city +
-            "&appid=" +
-            this.key +
-            "&units=metric"
-        )
-        .then((response) => {
-          console.log(response.data.list);
-          this.weather = response.data.list;
-          this.cityres = response.data.city.name;
-        });
+    getWeather() {
+      let payload = {
+        city: this.city,
+        key: this.key,
+      };
+      this.$store.dispatch("weather/getWeather", payload);
     },
   },
-  computed: {},
+  computed: {
+    // ...mapState(["isLoading", "cityres", "weather"]),
+    // ...mapGetters(["loading"]),
+    ...mapState(["isLoading"]),
+    ...mapState({
+      cityres: (state) => state.weather.cityres,
+      weather: (state) => state.weather.weather,
+    }),
+  },
   filters: {
     currencydecimal(value) {
       return value.toFixed(2);

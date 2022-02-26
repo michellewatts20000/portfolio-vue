@@ -93,12 +93,6 @@ export default {
     clearMessage() {
       this.$store.commit("clear");
     },
-    getJoke() {
-      this.$store.dispatch("getJoke");
-    },
-    // getToDo() {
-    //   this.$store.dispatch("getToDo");
-    // },
     zeroVowels() {
       this.$store.commit("vowels");
     },
@@ -114,11 +108,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-// .v-btn:not(.v-btn--round).v-size--default {
-//   color: $white;
-//   background-color: $ads-navy;
-//   font-weight: 900;
-// }
-</style>

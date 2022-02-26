@@ -31,11 +31,11 @@
 
           <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-wrench </v-icon>
-            React, Vue, Node.js, Express, Handlebars, JQuery
+            React, Vue, Node.js, Express
           </v-chip>
           <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-wrench </v-icon>
-            Chakra, Bootstrap, Vuetify
+            Bootstrap, Vuetify, Chakra
           </v-chip>
         </div>
 

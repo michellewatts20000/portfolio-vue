@@ -1,16 +1,18 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import moduleTodos from "./modules/todos";
-
+import weather from "./modules/weather";
+import axios from "axios";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   strict: false,
   modules: {
     moduleTodos,
+    weather,
   },
   state: {
-    loading: false,
+    isLoading: false,
     waveArray: [],
     count: 0,
     allNotes: [],
@@ -20,19 +22,25 @@ export default new Vuex.Store({
     posts: [],
     result: "",
     message: "",
+    cityres: "",
+    weather: [],
   },
   getters: {
     doubleCount(state) {
       return state.count * 2;
     },
     loading(state) {
-      return state.loading;
+      return state.isLoading;
     },
     result(state) {
       return state.result;
     },
   },
   mutations: {
+    getWeather(state, passOn) {
+      state.weather = passOn.weather;
+      state.cityres = passOn.cityres;
+    },
     increment(state) {
       state.count++;
     },
@@ -91,10 +99,29 @@ export default new Vuex.Store({
       state.result = result;
     },
     loading(state, newLoading) {
-      state.loading = newLoading;
+      state.isLoading = newLoading;
     },
   },
   actions: {
+    getWeather({ commit }, payload) {
+      commit("loading", true);
+      axios
+        .get(
+          "https://api.openweathermap.org/data/2.5/forecast?q=" +
+            payload.city +
+            "&appid=" +
+            payload.key +
+            "&units=metric"
+        )
+        .then((response) => {
+          let passOn = {
+            weather: response.data.list,
+            cityres: response.data.city.name,
+          };
+          commit("loading", false);
+          commit("getWeather", passOn);
+        });
+    },
     increment({ commit }) {
       commit("increment");
     },
