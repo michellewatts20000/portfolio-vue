@@ -2,24 +2,24 @@ const moduleTodos = {
   namespaced: true,
   state: {
     tasks: [
-      {
-        id: 1,
-        title: "Wake up",
-        done: false,
-        dueDate: "2020-10-16",
-      },
-      {
-        id: 2,
-        title: "Get bananas",
-        done: false,
-        dueDate: "2020-10-17",
-      },
-      {
-        id: 3,
-        title: "Eat bananas",
-        done: false,
-        dueDate: null,
-      },
+      // {
+      //   id: 1,
+      //   title: "Wake up",
+      //   done: false,
+      //   dueDate: "2020-10-16",
+      // },
+      // {
+      //   id: 2,
+      //   title: "Get bananas",
+      //   done: false,
+      //   dueDate: "2020-10-17",
+      // },
+      // {
+      //   id: 3,
+      //   title: "Eat bananas",
+      //   done: false,
+      //   dueDate: null,
+      // },
     ],
     snackbar: { show: false, text: "" },
   },
