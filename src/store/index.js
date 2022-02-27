@@ -2,7 +2,9 @@ import Vue from "vue";
 import Vuex from "vuex";
 import moduleTodos from "./modules/todos";
 import weather from "./modules/weather";
-import axios from "axios";
+import words from "./modules/words";
+import numbers from "./modules/numbers";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -10,37 +12,31 @@ export default new Vuex.Store({
   modules: {
     moduleTodos,
     weather,
+    numbers,
+    words,
   },
   state: {
     isLoading: false,
-    waveArray: [],
     count: 0,
-    allNotes: [],
+    waveArray: [],
     colors: ["red", "blue", "green", "black", "yellow", "purple", "white"],
     objects: ["domain", "star", "home", "car"],
     sizes: ["10", "25", "50", "75", "100"],
-    posts: [],
     result: "",
     message: "",
-    cityres: "",
-    weather: [],
   },
   getters: {
-    doubleCount(state) {
-      return state.count * 2;
-    },
     loading(state) {
       return state.isLoading;
+    },
+    doubleCount(state) {
+      return state.count * 2;
     },
     result(state) {
       return state.result;
     },
   },
   mutations: {
-    getWeather(state, passOn) {
-      state.weather = passOn.weather;
-      state.cityres = passOn.cityres;
-    },
     increment(state) {
       state.count++;
     },
@@ -87,41 +83,8 @@ export default new Vuex.Store({
     timesTwo(state) {
       state.count = state.count * 2;
     },
-    vowel(state) {
-      let reg = /[aeiou]/gi;
-      let split = state.message.split("");
-      let vowel = split.filter((item) => {
-        return !item.match(reg);
-      });
-      state.message = vowel.join("");
-    },
-    SET_RESULT(state, result) {
-      state.result = result;
-    },
-    loading(state, newLoading) {
-      state.isLoading = newLoading;
-    },
   },
   actions: {
-    getWeather({ commit }, payload) {
-      commit("loading", true);
-      axios
-        .get(
-          "https://api.openweathermap.org/data/2.5/forecast?q=" +
-            payload.city +
-            "&appid=" +
-            payload.key +
-            "&units=metric"
-        )
-        .then((response) => {
-          let passOn = {
-            weather: response.data.list,
-            cityres: response.data.city.name,
-          };
-          commit("loading", false);
-          commit("getWeather", passOn);
-        });
-    },
     increment({ commit }) {
       commit("increment");
     },

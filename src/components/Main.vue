@@ -8,12 +8,17 @@
         md="8"
       >
         <vue-typed-js
+          class="d-none d-sm-flex"
           :strings="['Web Developer', 'Designer', 'Drummer', 'Web Developer']"
         >
           <div class="display-2 mb-3">
             Hi! My name is Michelle. I'm a <span class="typing"> </span>
           </div>
         </vue-typed-js>
+
+        <div class="display-1 mb-3 d-sm-none">
+          Hi! My name is Michelle. I'm a Web Developer.
+        </div>
 
         <div class="subtitle-1 mb-5">
           I am a Frontend Developer at Argenti. I have a background in
