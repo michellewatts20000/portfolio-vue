@@ -3,9 +3,14 @@ const moduleTodos = {
   state: {
     tasks: [],
     snackbar: { show: false, text: "" },
+    sorting: false,
   },
   getters: {},
   mutations: {
+    setTasks(state, tasks) {
+      state.tasks = tasks;
+      console.log(tasks);
+    },
     updateTaskTitle(state, payload) {
       let task = state.tasks.filter((task) => task.id === payload.id)[0];
       task.title = payload.title;
@@ -43,6 +48,9 @@ const moduleTodos = {
     },
     deleteTask(state, id) {
       state.tasks = state.tasks.filter((task) => task.id !== id);
+    },
+    toggleSorting(state) {
+      state.sorting = !state.sorting;
     },
   },
   actions: {

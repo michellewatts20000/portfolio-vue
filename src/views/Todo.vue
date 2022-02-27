@@ -6,6 +6,7 @@
         <textfield />
         <todolist v-if="$store.state.moduleTodos.tasks.length" />
         <notask class="text-center" v-else />
+        <buttondonesorting v-if="$store.state.moduleTodos.sorting" />
       </v-col>
     </v-row>
   </v-container>
@@ -15,6 +16,7 @@
 import textfield from "../components/Todo/TextField.vue";
 import todolist from "../components/Todo/TodoList.vue";
 import notask from "../components/Todo/NoTasks.vue";
+import buttondonesorting from "../components/Todo/ButtonDoneSorting.vue";
 
 export default {
   name: "Todo",
@@ -22,6 +24,7 @@ export default {
     textfield,
     todolist,
     notask,
+    buttondonesorting,
   },
 };
 </script>

@@ -7,8 +7,8 @@ const numbers = {
     },
   },
   mutations: {
-    increment(state) {
-      state.count++;
+    increment(state, value) {
+      state.count += value;
     },
     decrement(state) {
       state.count--;
@@ -18,8 +18,8 @@ const numbers = {
     },
   },
   actions: {
-    increment({ commit }) {
-      commit("increment");
+    increment({ commit }, value) {
+      commit("increment", value);
     },
     timesTwo({ commit }) {
       commit("timesTwo");

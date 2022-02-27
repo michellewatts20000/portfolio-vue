@@ -27,6 +27,12 @@
         <v-select v-model="size" :items="sizes" label="Sizes"></v-select>
 
         <div class="display-1 mt-10">Numbers</div>
+        <v-text-field
+          label="increment number by"
+          type="number"
+          v-model.number="incrementBy"
+        >
+        </v-text-field>
         <h1>{{ count }}</h1>
 
         <v-btn class="mr-5" @click="increment"> + </v-btn>
@@ -52,6 +58,7 @@ export default {
       color: "",
       size: "50",
       object: "domain",
+      incrementBy: null,
     };
   },
   computed: {
@@ -72,7 +79,7 @@ export default {
   },
   methods: {
     increment() {
-      this.$store.dispatch("numbers/increment");
+      this.$store.dispatch("numbers/increment", this.incrementBy);
     },
     decrement() {
       this.$store.commit("numbers/decrement");
