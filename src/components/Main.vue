@@ -27,7 +27,7 @@
         </div>
 
         <v-btn
-          :class="`mr-2 ${b.textCol}--text subtitle-2`"
+          :class="`mr-2 ${b.textCol}--text body-2`"
           :color="b.color"
           v-for="b in ctaBtn"
           :key="b.id"
