@@ -1,7 +1,7 @@
 <template>
   <v-row class="justify-space-around mt-10">
     <v-btn
-      color="primary"
+      color="secondary"
       class="text-center"
       @click="$store.commit('moduleTodos/toggleSorting')"
       >Done sorting</v-btn

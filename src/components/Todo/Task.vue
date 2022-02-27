@@ -3,7 +3,7 @@
     <v-list-item
       @click="$store.commit('moduleTodos/doneTask', task.id)"
       :class="{ 'blue lighten-5': task.done }"
-      class="white"
+      class="white sortable-drag"
       :ripple="false"
     >
       <template v-slot:default>
@@ -65,5 +65,5 @@ export default {
   opacity:0
 
   .sortable-drag
-  box-shadow: 0 0 10px rgba(0,0,0, 0.3)
+  boxshadow: 0 0 10px rgba(0,0,0,0.3)
 </style>
