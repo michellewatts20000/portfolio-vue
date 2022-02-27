@@ -17,21 +17,11 @@ export default new Vuex.Store({
   },
   state: {
     isLoading: false,
-    count: 0,
-    waveArray: [],
     colors: ["red", "blue", "green", "black", "yellow", "purple", "white"],
     objects: ["domain", "star", "home", "car"],
     sizes: ["10", "25", "50", "75", "100"],
-    result: "",
-    message: "",
   },
   getters: {
-    // loading(state) {
-    //   return state.isLoading;
-    // },
-    doubleCount(state) {
-      return state.count * 2;
-    },
     result(state) {
       return state.result;
     },
@@ -40,59 +30,6 @@ export default new Vuex.Store({
     loading(state, newLoading) {
       state.isLoading = newLoading;
     },
-    increment(state) {
-      state.count++;
-    },
-    updateMessage(state, message) {
-      state.message = message;
-    },
-    decrement(state) {
-      state.count--;
-    },
-    reverse(state) {
-      state.message = state.message.split("").reverse().join("");
-    },
-    dash(state) {
-      state.message = state.message.split("").join("-");
-    },
-    vowels(state) {
-      let reg = /[aeiou]/gi;
-      let split = state.message.split("");
-      let vowel = split.filter((item) => {
-        return !item.match(reg);
-      });
-      state.message = vowel.join("");
-    },
-    wave(state) {
-      for (let i = 0; i < state.message.length; i++) {
-        let letter = state.message[i];
-        if (letter === " ") {
-          continue;
-        } else {
-          state.waveArray.push(
-            state.message.slice(0, i) +
-              letter.toUpperCase() +
-              state.message.slice(i + 1)
-          );
-        }
-      }
-      return state.waveArray;
-    },
-    clear(state) {
-      state.message = "";
-      state.waveArray = [];
-    },
-
-    timesTwo(state) {
-      state.count = state.count * 2;
-    },
   },
-  actions: {
-    increment({ commit }) {
-      commit("increment");
-    },
-    timesTwo({ commit }) {
-      commit("timesTwo");
-    },
-  },
+  actions: {},
 });

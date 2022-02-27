@@ -32,6 +32,9 @@
         <v-btn class="mr-5" @click="increment"> + </v-btn>
         <v-btn class="mr-5" @click="decrement"> - </v-btn>
         <v-btn @click="timesTwo"> x2 </v-btn>
+
+        <div class="display-1 mt-10">Double count</div>
+        <h1>{{ doubleCount }}</h1>
       </v-col>
     </v-row>
   </v-container>
@@ -52,52 +55,45 @@ export default {
     };
   },
   computed: {
-    ...mapState([
-      "count",
-      "categories",
-      "todos",
-      "users",
-      "shopNumber",
-      "colors",
-      "objects",
-      "sizes",
-      "result",
-      "waveArray",
-    ]),
-    ...mapGetters(["doubleCount", "shop", "loading", "result"]),
+    ...mapState(["colors", "objects", "sizes"]),
+    ...mapState({
+      waveArray: (state) => state.words.waveArray,
+      count: (state) => state.numbers.count,
+    }),
+    ...mapGetters("numbers", ["doubleCount"]),
     message: {
       get() {
-        return this.$store.state.message;
+        return this.$store.state.words.message;
       },
       set(value) {
-        this.$store.commit("updateMessage", value);
+        this.$store.commit("words/updateMessage", value);
       },
     },
   },
   methods: {
     increment() {
-      this.$store.dispatch("increment");
+      this.$store.dispatch("numbers/increment");
     },
     decrement() {
-      this.$store.commit("decrement");
+      this.$store.commit("numbers/decrement");
     },
     timesTwo() {
-      this.$store.commit("timesTwo");
+      this.$store.commit("numbers/timesTwo");
     },
     reverseMessage() {
-      this.$store.commit("reverse");
+      this.$store.commit("words/reverse");
     },
     dashMessage() {
-      this.$store.commit("dash");
+      this.$store.commit("words/dash");
     },
     clearMessage() {
-      this.$store.commit("clear");
+      this.$store.commit("words/clear");
     },
     zeroVowels() {
-      this.$store.commit("vowels");
+      this.$store.commit("words/vowels");
     },
     makeWave() {
-      this.$store.commit("wave");
+      this.$store.commit("words/wave");
     },
   },
 
