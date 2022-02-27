@@ -2,7 +2,7 @@
   <v-container fill-height>
     <v-row justify="space-around" class="text-center" align="center">
       <v-col cols="12" lg="8">
-        <div class="display-2 mb-3">Hi! My name is Michelle.</div>
+        <div class="display-1 mb-3">Hi! My name is Michelle.</div>
 
         <div class="subtitle-1 mb-5">
           I am a Full Stack web developer utilising a background in graphic

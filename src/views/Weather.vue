@@ -1,8 +1,8 @@
 <template>
   <v-container fill-height>
     <v-row justify="space-around" align="center">
-      <v-col cols="8">
-        <div class="text-center display-2 mb-3">Weather dashboard</div>
+      <v-col cols="12">
+        <div class="text-center display-1 mb-3">Weather dashboard</div>
         <v-select
           v-model="city"
           label="Select a city"
@@ -101,6 +101,7 @@ export default {
     // ...mapGetters(["loading"]),
     ...mapState(["isLoading"]),
     ...mapState({
+      // isLoading: (state) => state.weather.isLoading,
       cityres: (state) => state.weather.cityres,
       weather: (state) => state.weather.weather,
     }),

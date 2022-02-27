@@ -26,9 +26,9 @@ export default new Vuex.Store({
     message: "",
   },
   getters: {
-    loading(state) {
-      return state.isLoading;
-    },
+    // loading(state) {
+    //   return state.isLoading;
+    // },
     doubleCount(state) {
       return state.count * 2;
     },
@@ -37,6 +37,9 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    loading(state, newLoading) {
+      state.isLoading = newLoading;
+    },
     increment(state) {
       state.count++;
     },
