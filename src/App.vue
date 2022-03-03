@@ -111,6 +111,11 @@ export default {
           url: "/weather",
           icon: "mdi-apple-icloud",
         },
+         {
+          label: "Todo",
+          url: "/todo",
+          icon: "mdi-check-circle",
+        },
         {
           label: "Contact",
           url: "/contact",
