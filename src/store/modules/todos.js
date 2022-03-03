@@ -1,3 +1,8 @@
+import Localbase from 'localbase'
+let db = new Localbase('db')
+
+db.config.debug = false
+
 const moduleTodos = {
   namespaced: true,
   state: {
@@ -33,13 +38,8 @@ const moduleTodos = {
         state.snackbar.text = text;
       }, timeout);
     },
-    addTask(state, newTaskTitle) {
-      let newTask = {
-        id: Date.now(),
-        title: newTaskTitle,
-        done: false,
-        dueDate: null,
-      };
+    addTask(state, newTask) {
+      console.log(newTask)
       state.tasks.push(newTask);
     },
     doneTask(state, id) {
@@ -55,21 +55,62 @@ const moduleTodos = {
   },
   actions: {
     addTask({ commit }, newTaskTitle) {
-      commit("addTask", newTaskTitle);
-      commit("showSnackbar", "Task Added!");
+      let newTask = {
+        id: Date.now(),
+        title: newTaskTitle,
+        done: false,
+        dueDate: null,
+      };
+      db.collection('tasks').add({
+        id: Date.now(),
+        title: newTaskTitle,
+        done: false,
+        dueDate: null,
+      }).then(() => {
+        commit("addTask", newTask);
+        commit("showSnackbar", "Task Added!");
+      })
+    },
+    doneTask({ state, commit }, id) {
+      let task = state.tasks.filter((task) => task.id === id)[0];
+      db.collection('tasks').doc({ id: id }).update({
+        done: !task.done
+      }).then(() => {
+        commit('doneTask', id)
+      })
     },
     deleteTask({ commit }, id) {
-      commit("deleteTask", id);
-      commit("showSnackbar", "Task Deleted!");
+      db.collection('tasks').doc({ id: id }).delete().then(() => {
+        commit("deleteTask", id);
+        commit("showSnackbar", "Task Deleted!");
+      })
     },
     updateTaskTitle({ commit }, payload) {
-      commit("updateTaskTitle", payload);
-      commit("showSnackbar", "Task Edited!");
+      db.collection('tasks').doc({ id: payload.id }).update({
+        title: payload.title
+      }).then(() => {
+        commit("updateTaskTitle", payload);
+        commit("showSnackbar", "Task Edited!");
+      })
     },
     updateTaskDueDate({ commit }, payload) {
-      commit("updateTaskDueDate", payload);
-      commit("showSnackbar", "Due Date Updated!");
+      db.collection('tasks').doc({ id: payload.id }).update({
+        dueDate: payload.dueDate
+      }).then(() => {
+        commit("updateTaskDueDate", payload);
+        commit("showSnackbar", "Due Date Updated!");
+      })
     },
+    getTasks({ commit }) {
+      db.collection('tasks').get().then(tasks => {
+        commit('setTasks', tasks)
+      })
+    },
+    setTasks({ commit }, tasks) {
+      db.collection('tasks')
+        .set(tasks)
+      commit('setTasks', tasks)
+    }
   },
 };
 

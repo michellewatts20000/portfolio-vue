@@ -25,7 +25,7 @@ export default {
         return this.$store.state.moduleTodos.tasks;
       },
       set(value) {
-        this.$store.commit("moduleTodos/setTasks", value);
+        this.$store.dispatch("moduleTodos/setTasks", value);
       },
     },
   },

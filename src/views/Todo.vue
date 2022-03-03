@@ -26,5 +26,8 @@ export default {
     notask,
     buttondonesorting,
   },
+  mounted() {
+    this.$store.dispatch("moduleTodos/getTasks");
+  },
 };
 </script>

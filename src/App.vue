@@ -121,7 +121,6 @@ export default {
   },
   methods: {
     toggleTheme() {
-      // this.$vuetify.theme.themes.dark.anchor = "";
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
   },
