@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height>
+  <v-container fill-height class="my-5">
     <v-row>
       <v-card
         v-for="card in cards"
@@ -26,62 +26,62 @@
 
 <script>
 export default {
-  name: "Portfolio",
+  name: 'Portfolio',
   data() {
     return {
       show: false,
       cards: [
         {
-          name: "Unpaid Overtime Calculator",
-          url: "unpaid-ot.png",
+          name: 'Unpaid Overtime Calculator',
+          url: 'unpaid-ot.jpg',
           description:
             "A full-stack app that calculates the amount of unpaid hours and salary you have worked over one year. It's more then you think.",
-          deployed: "https://nofreework.com.au/",
-          github: "https://github.com/michellewatts20000/unpaid-overtime-calc",
+          deployed: 'https://nofreework.com.au/',
+          github: 'https://github.com/michellewatts20000/unpaid-overtime-calc',
         },
         {
           name: "What's in my Pantry?",
-          url: "pantry.png",
+          url: 'pantry.jpg',
           description:
             "What's in my pantry is an easy to use, all-in-one recipe search app that will display recipes based on a list of food items that are currently in your pantry.",
-          deployed: "https://michellewatts20000.github.io/whats-in-my-pantry/",
-          github: "https://github.com/michellewatts20000/whats-in-my-pantry",
+          deployed: 'https://michellewatts20000.github.io/whats-in-my-pantry/',
+          github: 'https://github.com/michellewatts20000/whats-in-my-pantry',
         },
         {
-          name: "Tech Blog",
-          url: "blogger.png",
+          name: 'Tech Blog',
+          url: 'blogger.jpg',
           description:
-            "A full-stack app that lets you write and comment about tech related issues. Create an account, check out other peoples blogs.",
-          deployed: "https://boiling-beach-99511.herokuapp.com/",
-          github: "https://github.com/michellewatts20000/tech-blog",
+            'A full-stack app that lets you write and comment about tech related issues. Create an account, check out other peoples blogs.',
+          deployed: 'https://boiling-beach-99511.herokuapp.com/',
+          github: 'https://github.com/michellewatts20000/tech-blog',
         },
         {
-          name: "Note Taker",
-          url: "note.png",
+          name: 'Note Taker',
+          url: 'note.jpg',
           description:
-            "Write notes and save them for later. Keep track of tasks. Click on the delete button next to a note to delete from the applications memory.",
-          deployed: "https://hidden-sands-80026.herokuapp.com/notes",
-          github: "https://github.com/michellewatts20000/note-taker",
+            'Write notes and save them for later. Keep track of tasks. Click on the delete button next to a note to delete from the applications memory.',
+          deployed: 'https://hidden-sands-80026.herokuapp.com/notes',
+          github: 'https://github.com/michellewatts20000/note-taker',
         },
         {
-          name: "Weather Dashboard",
-          url: "weather.png",
+          name: 'Weather Dashboard',
+          url: 'weather.jpg',
           description:
-            "The weather dashboard is an app that gives you the current weather and UV index for a place you search for and a 5 day forecast.",
-          deployed: "https://michellewatts20000.github.io/weather-dashboard",
-          github: "https://github.com/michellewatts20000/weather-dashboard",
+            'The weather dashboard is an app that gives you the current weather and UV index for a place you search for and a 5 day forecast.',
+          deployed: 'https://michellewatts20000.github.io/weather-dashboard',
+          github: 'https://github.com/michellewatts20000/weather-dashboard',
         },
         {
-          name: "Code Quiz",
-          url: "code.png",
+          name: 'Code Quiz',
+          url: 'code.jpg',
           description:
-            "You have 75 seconds to answer 5 coding questions. Once you have finished the quiz you will be asked to enter your initials to the high scores.",
-          deployed: "https://michellewatts20000.github.io/code-quiz/",
-          github: "https://github.com/michellewatts20000/code-quiz",
+            'You have 75 seconds to answer 5 coding questions. Once you have finished the quiz you will be asked to enter your initials to the high scores.',
+          deployed: 'https://michellewatts20000.github.io/code-quiz/',
+          github: 'https://github.com/michellewatts20000/code-quiz',
         },
       ],
-    };
+    }
   },
   methods: {},
-};
+}
 </script>

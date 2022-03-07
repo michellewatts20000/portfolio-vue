@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height>
+  <v-container fill-height class="my-5">
     <v-row justify="space-around" class="text-center" align="center">
       <v-col cols="12" lg="8">
         <div class="display-1 mb-3">Hi! My name is Michelle.</div>
@@ -114,32 +114,32 @@
 
 <script>
 export default {
-  name: "Resume",
+  name: 'Resume',
   data: () => ({
     items: [
       {
-        name: "Team-orienated",
+        name: 'Team-orienated',
         description:
-          "Team-oriented individual with strengths in analytical problem solving and collaborating across diverse groups. Adept at working independently and collaborating with teams across multiple functions to take information from a wide variety of sources and effectively break down concepts in layman terms to diverse audiences.",
+          'Team-oriented individual with strengths in analytical problem solving and collaborating across diverse groups. Adept at working independently and collaborating with teams across multiple functions to take information from a wide variety of sources and effectively break down concepts in layman terms to diverse audiences.',
       },
       {
-        name: "Strengths",
+        name: 'Strengths',
         description:
-          "A critical thinker with an eye for aesthetics and a research-based approach to design and storytelling. Strengths include problem solving, project management, and agile adaptation to last minute support changes.",
+          'A critical thinker with an eye for aesthetics and a research-based approach to design and storytelling. Strengths include problem solving, project management, and agile adaptation to last minute support changes.',
       },
       {
-        name: "Bootcamp certificate",
+        name: 'Bootcamp certificate',
         description:
-          "A 24-week intensive program focused on gaining technical programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Node.js, MySQL, MongoDB, Express, Handelbars.js & ReactJS.",
+          'A 24-week intensive program focused on gaining technical programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Node.js, MySQL, MongoDB, Express, Handelbars.js & ReactJS.',
       },
     ],
     ctaBtn: [
       {
-        text: "Download Resume",
-        href: "https://drive.google.com/file/d/1krIgipz9jmquz0QYmlm1wQfsUzI-PVIB/view?usp=sharing",
-        color: "primary",
+        text: 'Download Resume',
+        href: 'https://drive.google.com/file/d/1krIgipz9jmquz0QYmlm1wQfsUzI-PVIB/view?usp=sharing',
+        color: 'primary',
       },
     ],
   }),
-};
+}
 </script>

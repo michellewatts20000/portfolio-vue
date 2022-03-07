@@ -6,7 +6,7 @@
       <v-spacer></v-spacer>
       <v-btn icon @click="toggleTheme" text rounded>
         <v-icon @click="show = !show">{{
-          !show ? "mdi-moon-waning-crescent" : "mdi-white-balance-sunny"
+          !show ? 'mdi-moon-waning-crescent' : 'mdi-white-balance-sunny'
         }}</v-icon>
       </v-btn>
 
@@ -32,7 +32,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-main class="pa-10">
+    <v-main class="pa-5">
       <v-fade-transition mode="out-in">
         <router-view />
       </v-fade-transition>
@@ -63,7 +63,7 @@
           text
           rounded
         >
-          <v-icon>{{ "mdi-github" }}</v-icon>
+          <v-icon>{{ 'mdi-github' }}</v-icon>
         </v-btn>
         <v-btn
           class="my-2"
@@ -71,7 +71,7 @@
           text
           rounded
         >
-          <v-icon>{{ "mdi-linkedin" }}</v-icon>
+          <v-icon>{{ 'mdi-linkedin' }}</v-icon>
         </v-btn>
       </v-layout>
     </v-footer>
@@ -79,9 +79,9 @@
 </template>
 
 <script>
-import snackbar from "./components/Global/Snackbar.vue";
+import snackbar from './components/Global/Snackbar.vue'
 export default {
-  name: "App",
+  name: 'App',
   components: {
     snackbar,
   },
@@ -92,49 +92,49 @@ export default {
       show: false,
       links: [
         {
-          label: "Home",
-          url: "/",
-          icon: "mdi-home",
+          label: 'Home',
+          url: '/',
+          icon: 'mdi-home',
         },
         {
-          label: "Portfolio",
-          url: "/portfolio",
-          icon: "mdi-palette",
+          label: 'Portfolio',
+          url: '/portfolio',
+          icon: 'mdi-palette',
         },
         {
-          label: "Resume",
-          url: "/resume",
-          icon: "mdi-text-box-outline",
+          label: 'Resume',
+          url: '/resume',
+          icon: 'mdi-text-box-outline',
         },
         {
-          label: "Weather",
-          url: "/weather",
-          icon: "mdi-apple-icloud",
-        },
-         {
-          label: "Todo",
-          url: "/todo",
-          icon: "mdi-check-circle",
+          label: 'Weather',
+          url: '/weather',
+          icon: 'mdi-apple-icloud',
         },
         {
-          label: "Contact",
-          url: "/contact",
-          icon: "mdi-email",
+          label: 'Todo',
+          url: '/todo',
+          icon: 'mdi-check-circle',
+        },
+        {
+          label: 'Contact',
+          url: '/contact',
+          icon: 'mdi-email',
         },
       ],
-    };
+    }
   },
   methods: {
     toggleTheme() {
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark
     },
   },
   watch: {
     group() {
-      this.drawer = false;
+      this.drawer = false
     },
   },
-};
+}
 </script>
 
 <style lang="css"></style>

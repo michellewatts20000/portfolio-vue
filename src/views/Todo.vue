@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import textfield from "../components/Todo/TextField.vue";
-import todolist from "../components/Todo/TodoList.vue";
-import notask from "../components/Todo/NoTasks.vue";
-import buttondonesorting from "../components/Todo/ButtonDoneSorting.vue";
+import textfield from '../components/Todo/TextField.vue'
+import todolist from '../components/Todo/TodoList.vue'
+import notask from '../components/Todo/NoTasks.vue'
+import buttondonesorting from '../components/Todo/ButtonDoneSorting.vue'
 
 export default {
-  name: "Todo",
+  name: 'Todo',
   components: {
     textfield,
     todolist,
@@ -27,7 +27,7 @@ export default {
     buttondonesorting,
   },
   mounted() {
-    this.$store.dispatch("moduleTodos/getTasks");
+    this.$store.dispatch('moduleTodos/getTasks')
   },
-};
+}
 </script>
