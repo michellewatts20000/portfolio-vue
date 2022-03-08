@@ -26,7 +26,7 @@
 
           <v-chip class="ma-2" color="info" outlined pill>
             GitHub, MongoDB, MySQL, NoSQL
-            <v-icon right> mdi-account-outline </v-icon>
+            <v-icon left> mdi-account-outline </v-icon>
           </v-chip>
 
           <v-chip class="ma-2" color="info" outlined>
