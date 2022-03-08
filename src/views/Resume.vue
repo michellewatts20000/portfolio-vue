@@ -23,10 +23,9 @@
             <v-icon left> mdi-server-plus </v-icon>
             JavaScript ES6+, HTML5, CSS3
           </v-chip>
-
-          <v-chip class="ma-2" color="info" outlined pill>
-            GitHub, MongoDB, MySQL, NoSQL
+          <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-account-outline </v-icon>
+            GitHub, MongoDB, MySQL, NoSQL
           </v-chip>
 
           <v-chip class="ma-2" color="info" outlined>
