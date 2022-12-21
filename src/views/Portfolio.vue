@@ -40,6 +40,14 @@ export default {
           github: 'https://github.com/michellewatts20000/unpaid-overtime-calc',
         },
         {
+          name: "Hearo",
+          url: 'hearo.png',
+          description:
+            "Find quiet places to socialise in Sydney. An app that lets you search for quiet places and review places for their loudness.",
+          deployed: 'https://still-bayou-61713.herokuapp.com',
+          github: 'https://github.com/michellewatts20000/hearo',
+        },
+        {
           name: "What's in my Pantry?",
           url: 'pantry.jpg',
           description:
