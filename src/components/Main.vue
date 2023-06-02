@@ -11,7 +11,7 @@
           class="d-none d-sm-flex"
           :strings="['Web Developer', 'Designer', 'Drummer', 'Web Developer']"
         >
-          <div class="display-2 mb-3">
+          <div class="display-1 mb-3">
             Hi! My name is Michelle. I'm a <span class="typing"> </span>
           </div>
         </vue-typed-js>
@@ -22,8 +22,8 @@
 
         <div class="subtitle-1 mb-5">
           I am a Frontend Developer at Argenti. I have a background in
-          graphic/web design and audio engineering. Check out some of my work by
-          clicking the portfolio link in the navigation.
+          graphic, web design and audio engineering. Check out some of my work by
+          clicking the portfolio button below.
         </div>
 
         <v-btn
@@ -62,7 +62,7 @@ export default {
         textCol: "white",
       },
       {
-        text: "Resume",
+        text: "Download CV",
         href: "/resume",
         color: "secondary",
         textCol: "white",

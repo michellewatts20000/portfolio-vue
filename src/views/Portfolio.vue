@@ -1,9 +1,10 @@
 <template>
   <v-container fill-height class="my-5">
     <v-row>
+      <v-col v-for="card in cards"
+        :key="`${card.name}-header-link`">
       <v-card
-        v-for="card in cards"
-        :key="`${card.name}-header-link`"
+        style="padding: 15px;"
         class="mx-auto my-4"
         max-width="300"
       >
@@ -15,11 +16,12 @@
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-btn :href="card.deployed" class="primary body-2"> Deployed </v-btn>
+          <v-btn :href="card.deployed" class="primary body-2"> Live Project </v-btn>
           <v-spacer></v-spacer>
           <v-btn :href="card.github" class="secondary body-2"> GitHub </v-btn>
         </v-card-actions>
       </v-card>
+    </v-col>
     </v-row>
   </v-container>
 </template>
@@ -31,14 +33,15 @@ export default {
     return {
       show: false,
       cards: [
-        {
-          name: 'Unpaid Overtime Calculator',
-          url: 'unpaid-ot.jpg',
+      {
+          name: 'Promptopia',
+          url: 'note.jpg',
           description:
-            "A full-stack app that calculates the amount of unpaid hours and salary you have worked over one year. It's more then you think.",
-          deployed: 'https://nofreework.com.au/',
-          github: 'https://github.com/michellewatts20000/unpaid-overtime-calc',
+            'Create, edit and delete prompts for AI. Built with Next.js, MongoDB and Tailwind CSS.',
+          deployed: 'https://comforting-gumption-53ec62.netlify.app/',
+          github: 'https://github.com/michellewatts20000/promptopia',
         },
+        
         {
           name: "Hearo",
           url: 'hearo.png',
@@ -56,6 +59,14 @@ export default {
           github: 'https://github.com/michellewatts20000/whats-in-my-pantry',
         },
         {
+          name: 'Overtime Calculator',
+          url: 'unpaid-ot.jpg',
+          description:
+            "A full-stack app that calculates the amount of unpaid hours and salary you have worked over one year. It's more then you think.",
+          deployed: 'https://nofreework.com.au/',
+          github: 'https://github.com/michellewatts20000/unpaid-overtime-calc',
+        },
+        {
           name: 'Tech Blog',
           url: 'blogger.jpg',
           description:
@@ -64,29 +75,13 @@ export default {
           github: 'https://github.com/michellewatts20000/tech-blog',
         },
         {
-          name: 'Promptopia',
-          url: 'note.jpg',
-          description:
-            'Create, edit and delete prompts for AI. Built with Next.js, MongoDB and Tailwind CSS.',
-          deployed: 'https://comforting-gumption-53ec62.netlify.app/',
-          github: 'https://github.com/michellewatts20000/promptopia',
-        },
-        {
           name: 'Weather Dashboard',
           url: 'weather.jpg',
           description:
             'The weather dashboard is an app that gives you the current weather and UV index for a place you search for and a 5 day forecast.',
           deployed: 'https://michellewatts20000.github.io/weather-dashboard',
           github: 'https://github.com/michellewatts20000/weather-dashboard',
-        },
-        {
-          name: 'Code Quiz',
-          url: 'code.jpg',
-          description:
-            'You have 75 seconds to answer 5 coding questions. Once you have finished the quiz you will be asked to enter your initials to the high scores.',
-          deployed: 'https://michellewatts20000.github.io/code-quiz/',
-          github: 'https://github.com/michellewatts20000/code-quiz',
-        },
+        }
       ],
     }
   },

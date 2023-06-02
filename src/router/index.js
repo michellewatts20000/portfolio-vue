@@ -56,7 +56,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = `Watts - ${to.name}`;
+  document.title = `Michelle Watts - ${to.name}`;
   next();
 });
 

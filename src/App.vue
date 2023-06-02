@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-system-bar color="primary lighten-2"></v-system-bar>
-    <v-app-bar color="primary" dense app>
+    <v-app-bar color="primary" app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
       <v-btn icon @click="toggleTheme" text rounded>
@@ -100,11 +100,6 @@ export default {
           label: 'Portfolio',
           url: '/portfolio',
           icon: 'mdi-palette',
-        },
-        {
-          label: 'Resume',
-          url: '/resume',
-          icon: 'mdi-text-box-outline',
         },
         {
           label: 'Weather',
