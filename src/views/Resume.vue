@@ -5,8 +5,8 @@
         <div class="display-1 mb-3">Hi! My name is Michelle.</div>
 
         <div class="subtitle-1 mb-5">
-          I am a Full Stack web developer utilising a background in graphic
-          design to bring creative approaches to problem solving and UX.
+          I am a frontend web developer utilising a background in graphic
+          design to bring creative approaches to problem solving and UX/UI design.
         </div>
 
         <v-btn
@@ -21,16 +21,17 @@
         <div class="text-center mb-10">
           <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-server-plus </v-icon>
-            JavaScript ES6+, HTML5, CSS3
+            JavaScript, CSS, HTML
           </v-chip>
           <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-account-outline </v-icon>
-            GitHub, MongoDB, MySQL, NoSQL
+            Vue.js, React, Node.js, Vuetify, Material UI, SASS, Jest, MongoDB,
+MySQL, GraphQL, AWS, Git, npm, REST APIs
           </v-chip>
 
           <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-wrench </v-icon>
-            React, Vue, Node.js, Express
+            VSCode, GitHub, Jira, BitBucket, Figma
           </v-chip>
           <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-wrench </v-icon>
@@ -134,7 +135,7 @@ export default {
     ],
     ctaBtn: [
       {
-        text: 'Download Resume',
+        text: 'Download CV',
         href: 'https://drive.google.com/file/d/1krIgipz9jmquz0QYmlm1wQfsUzI-PVIB/view?usp=sharing',
         color: 'primary',
       },

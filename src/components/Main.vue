@@ -62,7 +62,7 @@ export default {
         textCol: "white",
       },
       {
-        text: "Download CV",
+        text: "CV",
         href: "/resume",
         color: "secondary",
         textCol: "white",
