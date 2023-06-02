@@ -64,12 +64,12 @@ export default {
           github: 'https://github.com/michellewatts20000/tech-blog',
         },
         {
-          name: 'Note Taker',
+          name: 'Promptopia',
           url: 'note.jpg',
           description:
-            'Write notes and save them for later. Keep track of tasks. Click on the delete button next to a note to delete from the applications memory.',
-          deployed: 'https://hidden-sands-80026.herokuapp.com/notes',
-          github: 'https://github.com/michellewatts20000/note-taker',
+            'Create, edit and delete prompts for AI. Built with Next.js, MongoDB and Tailwind CSS.',
+          deployed: 'https://comforting-gumption-53ec62.netlify.app/',
+          github: 'https://github.com/michellewatts20000/promptopia',
         },
         {
           name: 'Weather Dashboard',
