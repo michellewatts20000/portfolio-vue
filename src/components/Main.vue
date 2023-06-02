@@ -12,17 +12,32 @@
           :strings="['Web Developer', 'Designer', 'Drummer', 'Web Developer']"
         >
           <div class="display-1 mb-3">
-            Hi! My name is Michelle. I'm a <span class="typing"> </span>
+            Hi! My name is Michelle. <br />I'm a <span class="typing"> </span>
           </div>
         </vue-typed-js>
 
         <div class="display-1 mb-3 d-sm-none">
           Hi! My name is Michelle. I'm a Web Developer.
         </div>
+        <div class="mb-3">
+          <v-chip class="ma-2" color="info" outlined>
+            <v-icon left> mdi-server-plus </v-icon>
+            JavaScript, CSS, HTML
+          </v-chip>
+          <v-chip class="ma-2" color="info" outlined>
+            <v-icon left> mdi-wrench </v-icon>
+            VSCode, GitHub, Jira, BitBucket, Figma
+          </v-chip>
 
+          <v-chip class="ma-2" color="info" outlined>
+            <v-icon left> mdi-account-outline </v-icon>
+            Vue.js, React, Node.js, Vuetify, SASS, Jest, MongoDB, MySQL,
+            GraphQL, AWS, Git, npm, REST APIs
+          </v-chip>
+        </div>
         <div class="subtitle-1 mb-5">
-          I am a Frontend Developer at Argenti. I have a background in
-          graphic, web design and audio engineering. Check out some of my work by
+          I am a Frontend Developer at Argenti. I have a background in graphic,
+          web design and audio engineering. Check out some of my work by
           clicking the portfolio button below.
         </div>
 
@@ -52,22 +67,22 @@
 
 <script>
 export default {
-  name: "Main",
+  name: 'Main',
   data: () => ({
     ctaBtn: [
       {
-        text: "Portfolio",
-        href: "/portfolio",
-        color: "primary",
-        textCol: "white",
+        text: 'Portfolio',
+        href: '/portfolio',
+        color: 'primary',
+        textCol: 'white',
       },
       {
-        text: "CV",
-        href: "/resume",
-        color: "secondary",
-        textCol: "white",
+        text: 'CV',
+        href: '/resume',
+        color: 'secondary',
+        textCol: 'white',
       },
     ],
   }),
-};
+}
 </script>
