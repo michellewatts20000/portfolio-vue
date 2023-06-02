@@ -7,14 +7,13 @@
         cols="12"
         md="8"
       >
-
-        <div :class="{
+        <h1 :class="{
             'display-2': $vuetify.breakpoint.mdAndUp,
             'display-1': $vuetify.breakpoint.smOnly
           }" class="mb-3">
           Hi! My name is Michelle. <br />
           I'm a Frontend Developer.
-        </div>
+        </h1>
         <div class="mb-3 ">
           <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-server-plus </v-icon>
