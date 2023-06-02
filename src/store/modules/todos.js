@@ -14,7 +14,6 @@ const moduleTodos = {
   mutations: {
     setTasks(state, tasks) {
       state.tasks = tasks;
-      console.log(tasks);
     },
     updateTaskTitle(state, payload) {
       let task = state.tasks.filter((task) => task.id === payload.id)[0];
@@ -39,7 +38,6 @@ const moduleTodos = {
       }, timeout);
     },
     addTask(state, newTask) {
-      console.log(newTask)
       state.tasks.push(newTask);
     },
     doneTask(state, id) {
