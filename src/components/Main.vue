@@ -7,13 +7,6 @@
         cols="12"
         md="8"
       >
-        <!-- <vue-typed-js
-          :strings="['Web Developer', 'Designer', 'Drummer', 'Web Developer']"
-        >
-          <div class="display-1 mb-3">
-            Hi! My name is Michelle. <br />I'm a <span class="typing"> </span>
-          </div>
-        </vue-typed-js> -->
 
         <div :class="{
             'display-2': $vuetify.breakpoint.mdAndUp,

@@ -132,4 +132,8 @@ export default {
 }
 </script>
 
-<style lang="css"></style>
+<style lang="css">
+.gradient-background {
+  background: linear-gradient(to bottom, #ff00ff, #00ff00); /* Replace these colors with your desired gradient */
+}
+</style>
