@@ -1,25 +1,28 @@
 <template>
   <v-container fill-height>
-    <v-row justify="space-around" align="center">
+    <v-row justify="space-around">
       <v-col
         order="2"
-        class="text-sm-center text-md-left text-center mb-5"
+        class="mb-5 text-md-left text-center"
         cols="12"
         md="8"
       >
-        <vue-typed-js
-          class="d-none d-sm-flex"
+        <!-- <vue-typed-js
           :strings="['Web Developer', 'Designer', 'Drummer', 'Web Developer']"
         >
           <div class="display-1 mb-3">
             Hi! My name is Michelle. <br />I'm a <span class="typing"> </span>
           </div>
-        </vue-typed-js>
+        </vue-typed-js> -->
 
-        <div class="display-1 mb-3 d-sm-none">
-          Hi! My name is Michelle. I'm a Web Developer.
+        <div :class="{
+            'display-2': $vuetify.breakpoint.mdAndUp,
+            'display-1': $vuetify.breakpoint.smOnly
+          }" class="mb-3">
+          Hi! My name is Michelle. <br />
+          I'm a Frontend Developer.
         </div>
-        <div class="mb-3">
+        <div class="mb-3 ">
           <v-chip class="ma-2" color="info" outlined>
             <v-icon left> mdi-server-plus </v-icon>
             JavaScript, CSS, HTML
@@ -36,7 +39,7 @@
           </v-chip>
         </div>
         <div class="subtitle-1 mb-5">
-          I am a Frontend Developer at Argenti. I have a background in graphic,
+          I specialise in Vue and React frameworks. I have a background in graphic,
           web design and audio engineering. Check out some of my work by
           clicking the portfolio button below.
         </div>
